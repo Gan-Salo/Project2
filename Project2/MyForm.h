@@ -64,7 +64,17 @@ namespace Project2 {
 	private: System::Windows::Forms::Label^ Arealabel;
 	private: System::Windows::Forms::TextBox^ AreatextBox;
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
-	private: System::Windows::Forms::Label^ label1;
+
+	private: System::Windows::Forms::Panel^ panel9;
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Label^ strnum;
+	private: System::Windows::Forms::Button^ DelButton;
+	private: System::Windows::Forms::Button^ ChangeButton;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ column0;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column1;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column2;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column3;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column4;
 
 	private:
 		/// <summary>
@@ -108,7 +118,16 @@ namespace Project2 {
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->Arealabel = (gcnew System::Windows::Forms::Label());
 			this->AreatextBox = (gcnew System::Windows::Forms::TextBox());
-			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->ChangeButton = (gcnew System::Windows::Forms::Button());
+			this->DelButton = (gcnew System::Windows::Forms::Button());
+			this->panel9 = (gcnew System::Windows::Forms::Panel());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->strnum = (gcnew System::Windows::Forms::Label());
+			this->column0 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->TabControl->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
@@ -119,6 +138,7 @@ namespace Project2 {
 			this->panel5->SuspendLayout();
 			this->panel4->SuspendLayout();
 			this->panel1->SuspendLayout();
+			this->panel9->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// TabControl
@@ -137,6 +157,9 @@ namespace Project2 {
 			// 
 			// tabPage1
 			// 
+			this->tabPage1->Controls->Add(this->panel9);
+			this->tabPage1->Controls->Add(this->DelButton);
+			this->tabPage1->Controls->Add(this->ChangeButton);
 			this->tabPage1->Controls->Add(this->Datapanel);
 			this->tabPage1->Controls->Add(this->dataGridView1);
 			this->tabPage1->Location = System::Drawing::Point(4, 22);
@@ -200,15 +223,19 @@ namespace Project2 {
 			// dataGridView1
 			// 
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(5) {
+				this->column0,
+					this->Column1, this->Column2, this->Column3, this->Column4
+			});
 			this->dataGridView1->Location = System::Drawing::Point(7, 8);
 			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->Size = System::Drawing::Size(584, 489);
+			this->dataGridView1->RowHeadersVisible = false;
+			this->dataGridView1->Size = System::Drawing::Size(584, 437);
 			this->dataGridView1->TabIndex = 0;
 			// 
 			// Datapanel
 			// 
 			this->Datapanel->BackColor = System::Drawing::SystemColors::ControlLight;
-			this->Datapanel->Controls->Add(this->label1);
 			this->Datapanel->Controls->Add(this->voprbutton);
 			this->Datapanel->Controls->Add(this->Podtverdbutton);
 			this->Datapanel->Controls->Add(this->namelabel);
@@ -376,7 +403,7 @@ namespace Project2 {
 			// Korplabel
 			// 
 			this->Korplabel->AutoSize = true;
-			this->Korplabel->Location = System::Drawing::Point(9, 6);
+			this->Korplabel->Location = System::Drawing::Point(9, 8);
 			this->Korplabel->Name = L"Korplabel";
 			this->Korplabel->Size = System::Drawing::Size(90, 13);
 			this->Korplabel->TabIndex = 7;
@@ -416,20 +443,96 @@ namespace Project2 {
 			this->AreatextBox->Size = System::Drawing::Size(246, 20);
 			this->AreatextBox->TabIndex = 13;
 			// 
-			// label1
+			// ChangeButton
 			// 
-			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(25, 36);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(131, 13);
-			this->label1->TabIndex = 34;
-			this->label1->Text = L"Добавление сотрудника";
+			this->ChangeButton->BackColor = System::Drawing::SystemColors::ButtonFace;
+			this->ChangeButton->Enabled = false;
+			this->ChangeButton->Location = System::Drawing::Point(7, 452);
+			this->ChangeButton->Name = L"ChangeButton";
+			this->ChangeButton->Size = System::Drawing::Size(177, 46);
+			this->ChangeButton->TabIndex = 3;
+			this->ChangeButton->Text = L"Изменение";
+			this->ChangeButton->UseVisualStyleBackColor = false;
+			// 
+			// DelButton
+			// 
+			this->DelButton->BackColor = System::Drawing::SystemColors::ButtonFace;
+			this->DelButton->Enabled = false;
+			this->DelButton->Location = System::Drawing::Point(190, 452);
+			this->DelButton->Name = L"DelButton";
+			this->DelButton->Size = System::Drawing::Size(174, 46);
+			this->DelButton->TabIndex = 4;
+			this->DelButton->Text = L"Удаление";
+			this->DelButton->UseVisualStyleBackColor = false;
+			// 
+			// panel9
+			// 
+			this->panel9->BackColor = System::Drawing::SystemColors::ControlLight;
+			this->panel9->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel9->Controls->Add(this->label2);
+			this->panel9->Controls->Add(this->strnum);
+			this->panel9->Location = System::Drawing::Point(370, 452);
+			this->panel9->Name = L"panel9";
+			this->panel9->Size = System::Drawing::Size(221, 45);
+			this->panel9->TabIndex = 23;
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label2->Location = System::Drawing::Point(8, 13);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(178, 16);
+			this->label2->TabIndex = 21;
+			this->label2->Text = L"Номер выбранной строки:";
+			// 
+			// strnum
+			// 
+			this->strnum->AutoSize = true;
+			this->strnum->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->strnum->Location = System::Drawing::Point(182, 12);
+			this->strnum->Name = L"strnum";
+			this->strnum->Size = System::Drawing::Size(18, 20);
+			this->strnum->TabIndex = 20;
+			this->strnum->Text = L"1";
+			// 
+			// column0
+			// 
+			this->column0->HeaderText = L"ФИО";
+			this->column0->Name = L"column0";
+			this->column0->Width = 200;
+			// 
+			// Column1
+			// 
+			this->Column1->HeaderText = L"Возраст";
+			this->Column1->Name = L"Column1";
+			this->Column1->Width = 75;
+			// 
+			// Column2
+			// 
+			this->Column2->HeaderText = L"Телефон";
+			this->Column2->Name = L"Column2";
+			this->Column2->Width = 110;
+			// 
+			// Column3
+			// 
+			this->Column3->HeaderText = L"Должность";
+			this->Column3->Name = L"Column3";
+			this->Column3->Width = 125;
+			// 
+			// Column4
+			// 
+			this->Column4->HeaderText = L"Кабинет";
+			this->Column4->Name = L"Column4";
+			this->Column4->Width = 75;
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(907, 551);
+			this->ClientSize = System::Drawing::Size(900, 551);
 			this->Controls->Add(this->TabControl);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
@@ -449,6 +552,8 @@ namespace Project2 {
 			this->panel4->PerformLayout();
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
+			this->panel9->ResumeLayout(false);
+			this->panel9->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
