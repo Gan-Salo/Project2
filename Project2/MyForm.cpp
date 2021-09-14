@@ -131,6 +131,91 @@ System::Void Project2::MyForm::MyForm_Load(System::Object^ sender, System::Event
 {
     constr();
 
+    for (int i = 0; i < 1; i++)
+    {
+        String^ temp;
+        for (int j = 0; j < wcslen(dl[0].dl_title); j++)
+        {
+            temp += dl[0].dl_title[j];
+        }
+        pers1comboBox->Items->Add(temp);
+      
+    }
+
+    for (int i = 0; i < 1; i++)
+    {        
+        pers2comboBox->Items->Add(cab[0].cabnum);
+    }
+
+    for (int i = 0; i < 1; i++)
+    {
+        String^ temp;
+        for (int j = 0; j < wcslen(usl[0].u_title); j++)
+        {
+            temp += usl[0].u_title[j];
+        }
+        zapcomboBox1->Items->Add(temp);
+
+    }
+
+    for (int i = 0; i < 1; i++)
+    {
+        String^ temp;
+        for (int j = 0; j < wcslen(pers[0].d_fio); j++)
+        {
+            temp += pers[0].d_fio[j];
+        }
+        zapcomboBox2->Items->Add(temp);
+        
+    }
+    //zapcomboBox3->Text += pers[0].cabnum;
+    //textBox7->Text += pers[0].cabnum;
+
+    for (int i = 0; i < 1; i++)
+    {
+        String^ temp;
+        for (int j = 0; j < wcslen(pers[0].d_fio); j++)
+        {
+            temp += pers[0].d_fio[j];
+        }
+        //zapcomboBox3->Items->Add(temp);
+
+    }
+    /*for (int i = 0; i < 1; i++)
+    {
+        String^ temp;
+        for (int j = 0; j < wcslen(ins[i].fio); j++)
+        {
+            temp += ins[i].fio[j];
+        }
+        comboBox2->Items->Add(temp);
+    }
+    comboBox3->Items->Add("1");
+    comboBox3->Items->Add("2");
+    for (int i = 0; i < n_c; i++)
+    {
+        String^ temp;
+        for (int j = 0; j < wcslen(cr[i].num); j++)
+        {
+            temp += cr[i].num[j];
+        }
+        comboBox4->Items->Add(temp);
+    }
+
+    for (int i = 0; i < wcslen(dl[0].dl_title); i++)
+    {
+        String^ dl[i] = Convert::ToString(dl[0].dl_title[i]);
+        pers1comboBox->Items->Add(Convert::ToString(dl[0].dl_title[i]));
+    }*/
+    //pers1comboBox->Items->Add(dl[0].dl_title[20]);
+}
+
+System::Void Project2::MyForm::zapcomboBox2_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e)
+{   
+    int s;
+    textBox7->Text += "";
+    s = zapcomboBox2->SelectedIndex;
+    textBox7->Text += pers[s].cabnum;
 }
 //System::Void Project2::MyForm::button6_Click(System::Object^ sender, System::EventArgs^ e) {
 //    ;

@@ -1,5 +1,7 @@
 #pragma once
 
+#include <string>
+
 namespace Project2 {
 
 	using namespace System;
@@ -49,10 +51,12 @@ namespace Project2 {
 	private: System::Windows::Forms::Panel^ panel8;
 	private: System::Windows::Forms::Button^ Cancelbutton;
 	private: System::Windows::Forms::Panel^ panel7;
-	private: System::Windows::Forms::ComboBox^ TabchcomboBox;
+	private: System::Windows::Forms::ComboBox^ pers2comboBox;
+
 	private: System::Windows::Forms::Label^ Tabchlabel;
 	private: System::Windows::Forms::Panel^ panel6;
-	private: System::Windows::Forms::ComboBox^ TypecomboBox;
+	private: System::Windows::Forms::ComboBox^ pers1comboBox;
+
 	private: System::Windows::Forms::Label^ Typelabel;
 	private: System::Windows::Forms::Panel^ panel5;
 	private: System::Windows::Forms::Label^ Numlabel;
@@ -117,16 +121,19 @@ namespace Project2 {
 	private: System::Windows::Forms::Button^ button7;
 	private: System::Windows::Forms::Panel^ panel13;
 	private: System::Windows::Forms::Panel^ panel15;
-	private: System::Windows::Forms::ComboBox^ comboBox3;
+
+
 	private: System::Windows::Forms::Label^ label9;
 	private: System::Windows::Forms::Panel^ panel18;
 	private: System::Windows::Forms::Label^ label12;
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::Panel^ panel19;
-	private: System::Windows::Forms::ComboBox^ comboBox2;
+private: System::Windows::Forms::ComboBox^ zapcomboBox1;
+
 	private: System::Windows::Forms::Label^ label13;
 	private: System::Windows::Forms::Panel^ panel20;
-	private: System::Windows::Forms::ComboBox^ comboBox4;
+private: System::Windows::Forms::ComboBox^ zapcomboBox2;
+
 	private: System::Windows::Forms::Label^ label14;
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button4;
@@ -173,7 +180,8 @@ private: System::Windows::Forms::Label^ label21;
 private: System::Windows::Forms::Panel^ panel28;
 private: System::Windows::Forms::Button^ button25;
 private: System::Windows::Forms::Panel^ panel29;
-private: System::Windows::Forms::ComboBox^ comboBox6;
+private: System::Windows::Forms::ComboBox^ dlcomboBox1;
+
 private: System::Windows::Forms::Label^ label22;
 private: System::Windows::Forms::Panel^ panel30;
 private: System::Windows::Forms::Label^ label23;
@@ -186,6 +194,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxC
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn6;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn8;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn9;
+private: System::Windows::Forms::TextBox^ textBox7;
 private: System::Windows::Forms::TextBox^ textBox6;
 
 
@@ -224,10 +233,10 @@ private: System::Windows::Forms::TextBox^ textBox6;
 			this->panel8 = (gcnew System::Windows::Forms::Panel());
 			this->Cancelbutton = (gcnew System::Windows::Forms::Button());
 			this->panel7 = (gcnew System::Windows::Forms::Panel());
-			this->TabchcomboBox = (gcnew System::Windows::Forms::ComboBox());
+			this->pers2comboBox = (gcnew System::Windows::Forms::ComboBox());
 			this->Tabchlabel = (gcnew System::Windows::Forms::Label());
 			this->panel6 = (gcnew System::Windows::Forms::Panel());
-			this->TypecomboBox = (gcnew System::Windows::Forms::ComboBox());
+			this->pers1comboBox = (gcnew System::Windows::Forms::ComboBox());
 			this->Typelabel = (gcnew System::Windows::Forms::Label());
 			this->panel5 = (gcnew System::Windows::Forms::Panel());
 			this->Numlabel = (gcnew System::Windows::Forms::Label());
@@ -263,16 +272,16 @@ private: System::Windows::Forms::TextBox^ textBox6;
 			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->panel13 = (gcnew System::Windows::Forms::Panel());
 			this->panel15 = (gcnew System::Windows::Forms::Panel());
-			this->comboBox3 = (gcnew System::Windows::Forms::ComboBox());
+			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->panel18 = (gcnew System::Windows::Forms::Panel());
 			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->panel19 = (gcnew System::Windows::Forms::Panel());
-			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
+			this->zapcomboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->label13 = (gcnew System::Windows::Forms::Label());
 			this->panel20 = (gcnew System::Windows::Forms::Panel());
-			this->comboBox4 = (gcnew System::Windows::Forms::ComboBox());
+			this->zapcomboBox2 = (gcnew System::Windows::Forms::ComboBox());
 			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
@@ -325,6 +334,8 @@ private: System::Windows::Forms::TextBox^ textBox6;
 			this->label19 = (gcnew System::Windows::Forms::Label());
 			this->label20 = (gcnew System::Windows::Forms::Label());
 			this->dataGridView5 = (gcnew System::Windows::Forms::DataGridView());
+			this->dataGridViewTextBoxColumn8 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->dataGridViewTextBoxColumn9 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->panel27 = (gcnew System::Windows::Forms::Panel());
 			this->button23 = (gcnew System::Windows::Forms::Button());
 			this->button24 = (gcnew System::Windows::Forms::Button());
@@ -332,7 +343,7 @@ private: System::Windows::Forms::TextBox^ textBox6;
 			this->panel28 = (gcnew System::Windows::Forms::Panel());
 			this->button25 = (gcnew System::Windows::Forms::Button());
 			this->panel29 = (gcnew System::Windows::Forms::Panel());
-			this->comboBox6 = (gcnew System::Windows::Forms::ComboBox());
+			this->dlcomboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->label22 = (gcnew System::Windows::Forms::Label());
 			this->panel30 = (gcnew System::Windows::Forms::Panel());
 			this->label23 = (gcnew System::Windows::Forms::Label());
@@ -340,8 +351,6 @@ private: System::Windows::Forms::TextBox^ textBox6;
 			this->button20 = (gcnew System::Windows::Forms::Button());
 			this->button22 = (gcnew System::Windows::Forms::Button());
 			this->button21 = (gcnew System::Windows::Forms::Button());
-			this->dataGridViewTextBoxColumn8 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->dataGridViewTextBoxColumn9 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->TabControl->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			this->panel9->SuspendLayout();
@@ -496,7 +505,6 @@ private: System::Windows::Forms::TextBox^ textBox6;
 			this->Datapanel->Name = L"Datapanel";
 			this->Datapanel->Size = System::Drawing::Size(271, 492);
 			this->Datapanel->TabIndex = 2;
-			this->Datapanel->Visible = false;
 			// 
 			// voprbutton
 			// 
@@ -553,22 +561,21 @@ private: System::Windows::Forms::TextBox^ textBox6;
 			// 
 			this->panel7->BackColor = System::Drawing::SystemColors::Control;
 			this->panel7->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->panel7->Controls->Add(this->TabchcomboBox);
+			this->panel7->Controls->Add(this->pers2comboBox);
 			this->panel7->Controls->Add(this->Tabchlabel);
 			this->panel7->Location = System::Drawing::Point(0, 359);
 			this->panel7->Name = L"panel7";
 			this->panel7->Size = System::Drawing::Size(271, 63);
 			this->panel7->TabIndex = 31;
 			// 
-			// TabchcomboBox
+			// pers2comboBox
 			// 
-			this->TabchcomboBox->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
-			this->TabchcomboBox->FormattingEnabled = true;
-			this->TabchcomboBox->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"", L"Меловая", L"Маркерная" });
-			this->TabchcomboBox->Location = System::Drawing::Point(11, 28);
-			this->TabchcomboBox->Name = L"TabchcomboBox";
-			this->TabchcomboBox->Size = System::Drawing::Size(247, 21);
-			this->TabchcomboBox->TabIndex = 21;
+			this->pers2comboBox->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->pers2comboBox->FormattingEnabled = true;
+			this->pers2comboBox->Location = System::Drawing::Point(11, 28);
+			this->pers2comboBox->Name = L"pers2comboBox";
+			this->pers2comboBox->Size = System::Drawing::Size(247, 21);
+			this->pers2comboBox->TabIndex = 21;
 			// 
 			// Tabchlabel
 			// 
@@ -583,22 +590,21 @@ private: System::Windows::Forms::TextBox^ textBox6;
 			// 
 			this->panel6->BackColor = System::Drawing::SystemColors::Control;
 			this->panel6->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->panel6->Controls->Add(this->TypecomboBox);
+			this->panel6->Controls->Add(this->pers1comboBox);
 			this->panel6->Controls->Add(this->Typelabel);
 			this->panel6->Location = System::Drawing::Point(0, 291);
 			this->panel6->Name = L"panel6";
 			this->panel6->Size = System::Drawing::Size(271, 69);
 			this->panel6->TabIndex = 30;
 			// 
-			// TypecomboBox
+			// pers1comboBox
 			// 
-			this->TypecomboBox->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
-			this->TypecomboBox->FormattingEnabled = true;
-			this->TypecomboBox->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"", L"Мультимедийная", L"Не-Мультимедийная" });
-			this->TypecomboBox->Location = System::Drawing::Point(11, 32);
-			this->TypecomboBox->Name = L"TypecomboBox";
-			this->TypecomboBox->Size = System::Drawing::Size(247, 21);
-			this->TypecomboBox->TabIndex = 20;
+			this->pers1comboBox->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->pers1comboBox->FormattingEnabled = true;
+			this->pers1comboBox->Location = System::Drawing::Point(11, 32);
+			this->pers1comboBox->Name = L"pers1comboBox";
+			this->pers1comboBox->Size = System::Drawing::Size(247, 21);
+			this->pers1comboBox->TabIndex = 20;
 			// 
 			// Typelabel
 			// 
@@ -848,7 +854,6 @@ private: System::Windows::Forms::TextBox^ textBox6;
 			this->panel3->Name = L"panel3";
 			this->panel3->Size = System::Drawing::Size(271, 492);
 			this->panel3->TabIndex = 27;
-			this->panel3->Visible = false;
 			// 
 			// button5
 			// 
@@ -915,22 +920,20 @@ private: System::Windows::Forms::TextBox^ textBox6;
 			// 
 			this->panel15->BackColor = System::Drawing::SystemColors::Control;
 			this->panel15->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->panel15->Controls->Add(this->comboBox3);
+			this->panel15->Controls->Add(this->textBox7);
 			this->panel15->Controls->Add(this->label9);
 			this->panel15->Location = System::Drawing::Point(0, 291);
 			this->panel15->Name = L"panel15";
 			this->panel15->Size = System::Drawing::Size(271, 69);
 			this->panel15->TabIndex = 30;
 			// 
-			// comboBox3
+			// textBox7
 			// 
-			this->comboBox3->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
-			this->comboBox3->FormattingEnabled = true;
-			this->comboBox3->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"", L"Мультимедийная", L"Не-Мультимедийная" });
-			this->comboBox3->Location = System::Drawing::Point(11, 32);
-			this->comboBox3->Name = L"comboBox3";
-			this->comboBox3->Size = System::Drawing::Size(247, 21);
-			this->comboBox3->TabIndex = 20;
+			this->textBox7->Location = System::Drawing::Point(12, 31);
+			this->textBox7->Name = L"textBox7";
+			this->textBox7->ReadOnly = true;
+			this->textBox7->Size = System::Drawing::Size(248, 20);
+			this->textBox7->TabIndex = 18;
 			// 
 			// label9
 			// 
@@ -972,22 +975,21 @@ private: System::Windows::Forms::TextBox^ textBox6;
 			// 
 			this->panel19->BackColor = System::Drawing::SystemColors::Control;
 			this->panel19->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->panel19->Controls->Add(this->comboBox2);
+			this->panel19->Controls->Add(this->zapcomboBox1);
 			this->panel19->Controls->Add(this->label13);
 			this->panel19->Location = System::Drawing::Point(0, 80);
 			this->panel19->Name = L"panel19";
 			this->panel19->Size = System::Drawing::Size(271, 70);
 			this->panel19->TabIndex = 28;
 			// 
-			// comboBox2
+			// zapcomboBox1
 			// 
-			this->comboBox2->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
-			this->comboBox2->FormattingEnabled = true;
-			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"", L"Меловая", L"Маркерная" });
-			this->comboBox2->Location = System::Drawing::Point(12, 31);
-			this->comboBox2->Name = L"comboBox2";
-			this->comboBox2->Size = System::Drawing::Size(247, 21);
-			this->comboBox2->TabIndex = 21;
+			this->zapcomboBox1->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->zapcomboBox1->FormattingEnabled = true;
+			this->zapcomboBox1->Location = System::Drawing::Point(12, 31);
+			this->zapcomboBox1->Name = L"zapcomboBox1";
+			this->zapcomboBox1->Size = System::Drawing::Size(247, 21);
+			this->zapcomboBox1->TabIndex = 21;
 			// 
 			// label13
 			// 
@@ -1002,22 +1004,22 @@ private: System::Windows::Forms::TextBox^ textBox6;
 			// 
 			this->panel20->BackColor = System::Drawing::SystemColors::Control;
 			this->panel20->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->panel20->Controls->Add(this->comboBox4);
+			this->panel20->Controls->Add(this->zapcomboBox2);
 			this->panel20->Controls->Add(this->label14);
 			this->panel20->Location = System::Drawing::Point(0, 227);
 			this->panel20->Name = L"panel20";
 			this->panel20->Size = System::Drawing::Size(271, 65);
 			this->panel20->TabIndex = 23;
 			// 
-			// comboBox4
+			// zapcomboBox2
 			// 
-			this->comboBox4->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
-			this->comboBox4->FormattingEnabled = true;
-			this->comboBox4->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"", L"Меловая", L"Маркерная" });
-			this->comboBox4->Location = System::Drawing::Point(11, 28);
-			this->comboBox4->Name = L"comboBox4";
-			this->comboBox4->Size = System::Drawing::Size(247, 21);
-			this->comboBox4->TabIndex = 22;
+			this->zapcomboBox2->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->zapcomboBox2->FormattingEnabled = true;
+			this->zapcomboBox2->Location = System::Drawing::Point(11, 28);
+			this->zapcomboBox2->Name = L"zapcomboBox2";
+			this->zapcomboBox2->Size = System::Drawing::Size(247, 21);
+			this->zapcomboBox2->TabIndex = 22;
+			this->zapcomboBox2->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::zapcomboBox2_SelectedIndexChanged);
 			// 
 			// label14
 			// 
@@ -1566,6 +1568,18 @@ private: System::Windows::Forms::TextBox^ textBox6;
 			this->dataGridView5->Size = System::Drawing::Size(699, 444);
 			this->dataGridView5->TabIndex = 40;
 			// 
+			// dataGridViewTextBoxColumn8
+			// 
+			this->dataGridViewTextBoxColumn8->HeaderText = L"Название должности";
+			this->dataGridViewTextBoxColumn8->Name = L"dataGridViewTextBoxColumn8";
+			this->dataGridViewTextBoxColumn8->Width = 400;
+			// 
+			// dataGridViewTextBoxColumn9
+			// 
+			this->dataGridViewTextBoxColumn9->HeaderText = L"Подразделение";
+			this->dataGridViewTextBoxColumn9->Name = L"dataGridViewTextBoxColumn9";
+			this->dataGridViewTextBoxColumn9->Width = 300;
+			// 
 			// panel27
 			// 
 			this->panel27->BackColor = System::Drawing::SystemColors::ControlLight;
@@ -1636,22 +1650,22 @@ private: System::Windows::Forms::TextBox^ textBox6;
 			// 
 			this->panel29->BackColor = System::Drawing::SystemColors::Control;
 			this->panel29->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->panel29->Controls->Add(this->comboBox6);
+			this->panel29->Controls->Add(this->dlcomboBox1);
 			this->panel29->Controls->Add(this->label22);
 			this->panel29->Location = System::Drawing::Point(0, 148);
 			this->panel29->Name = L"panel29";
 			this->panel29->Size = System::Drawing::Size(271, 80);
 			this->panel29->TabIndex = 29;
 			// 
-			// comboBox6
+			// dlcomboBox1
 			// 
-			this->comboBox6->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
-			this->comboBox6->FormattingEnabled = true;
-			this->comboBox6->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Мед. персонал", L"Бухгалтерия", L"Уборка помещений" });
-			this->comboBox6->Location = System::Drawing::Point(11, 38);
-			this->comboBox6->Name = L"comboBox6";
-			this->comboBox6->Size = System::Drawing::Size(247, 21);
-			this->comboBox6->TabIndex = 20;
+			this->dlcomboBox1->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->dlcomboBox1->FormattingEnabled = true;
+			this->dlcomboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Мед. персонал", L"Бухгалтерия", L"Уборка помещений" });
+			this->dlcomboBox1->Location = System::Drawing::Point(11, 38);
+			this->dlcomboBox1->Name = L"dlcomboBox1";
+			this->dlcomboBox1->Size = System::Drawing::Size(247, 21);
+			this->dlcomboBox1->TabIndex = 20;
 			// 
 			// label22
 			// 
@@ -1721,18 +1735,6 @@ private: System::Windows::Forms::TextBox^ textBox6;
 			this->button21->TabIndex = 45;
 			this->button21->Text = L"Удаление";
 			this->button21->UseVisualStyleBackColor = false;
-			// 
-			// dataGridViewTextBoxColumn8
-			// 
-			this->dataGridViewTextBoxColumn8->HeaderText = L"Название должности";
-			this->dataGridViewTextBoxColumn8->Name = L"dataGridViewTextBoxColumn8";
-			this->dataGridViewTextBoxColumn8->Width = 400;
-			// 
-			// dataGridViewTextBoxColumn9
-			// 
-			this->dataGridViewTextBoxColumn9->HeaderText = L"Подразделение";
-			this->dataGridViewTextBoxColumn9->Name = L"dataGridViewTextBoxColumn9";
-			this->dataGridViewTextBoxColumn9->Width = 300;
 			// 
 			// MyForm
 			// 
@@ -1817,5 +1819,6 @@ private: System::Windows::Forms::TextBox^ textBox6;
 	}
 private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e);
 
+private: System::Void zapcomboBox2_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e);
 };
 }
