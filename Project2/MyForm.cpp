@@ -6,6 +6,9 @@
 
 using namespace Project2; // Название проекта
 
+int f_p = 0, f_z = 0, f_c = 0, f_u = 0, f_d = 0;
+int rez = 0, n = 1;
+
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
@@ -217,7 +220,78 @@ System::Void Project2::MyForm::zapcomboBox2_SelectedIndexChanged(System::Object^
     s = zapcomboBox2->SelectedIndex;
     textBox7->Text += pers[s].cabnum;
 }
-//System::Void Project2::MyForm::button6_Click(System::Object^ sender, System::EventArgs^ e) {
-//    ;
-//
-//}
+
+System::Void Project2::MyForm::perspodbut_Click(System::Object^ sender, System::EventArgs^ e) {
+
+    if (rez == 1)
+    {
+
+        int numd_fio = 0, numd_tel = 0, numd_dolzn = 0;
+        if (PersTextBox1->Text == "" || PersTextBox2->Text == "" || PersTextBox3->Text == "" || pers1comboBox->Text == "" || pers2comboBox->Text == "")
+        {
+            MessageBox::Show("Ошибка! Все поля должны быть заполнены!");
+        }
+        else
+        {
+
+            for (int i = 0; i < this->PersTextBox1->Text->Length; i++)
+            {
+                pers[n].d_fio[i] = this->PersTextBox1->Text[i];
+                numd_fio++;
+            }
+
+            try
+            {
+                pers[n].d_age = Convert::ToInt32(this->PersTextBox2->Text);
+            }
+            catch (...)
+            {
+                MessageBox::Show("Ошибка! В поле 'Возраст' должны быть введены только числовые значения.");
+                return;
+            }
+            
+            for (int i = 0; i < this->PersTextBox3->Text->Length; i++)
+            {
+                pers[n].d_tel[i] = this->PersTextBox3->Text[i];
+                numd_tel++;
+            }
+                                 
+            for (int i = 0; i < this->pers1comboBox->Text->Length; i++)
+            {
+                pers[n].d_dolzn[i] = this->pers1comboBox->Text[i];
+                numd_dolzn++;
+            }
+
+            pers[n].cabnum = Convert::ToInt32(this->pers2comboBox->Text);
+
+            //Запись в таблицу
+            dataGridView1->Rows->Add();
+
+            for (int m = 0; m < numd_fio; m++)
+            {
+                dataGridView1[0, n]->Value += Convert::ToString(pers[n].d_fio[m]);
+            }
+
+            dataGridView1[1, n]->Value = Convert::ToString(pers[n].d_age);
+                     
+            for (int m = 0; m < numd_tel; m++)
+            {
+                dataGridView1[2, n]->Value += Convert::ToString(pers[n].d_tel[m]);
+            }
+
+            for (int m = 0; m < numd_dolzn; m++)
+            {
+                dataGridView1[3, n]->Value += Convert::ToString(pers[n].d_dolzn[m]);
+            }
+            
+            dataGridView1[4, n]->Value = Convert::ToString(pers[n].cabnum);  
+
+            n++;
+        }
+    }
+}
+
+
+System::Void Project2::MyForm::persbutton1_Click(System::Object^ sender, System::EventArgs^ e) {
+    rez = 1;
+}
