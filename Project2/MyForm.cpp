@@ -186,51 +186,6 @@ System::Void Project2::MyForm::MyForm_Load(System::Object^ sender, System::Event
 
 System::Void Project2::MyForm::TabControl_Selecting(System::Object^ sender, System::Windows::Forms::TabControlCancelEventArgs^ e) {
     
-    pers1comboBox->Items->Clear();
-    pers2comboBox->Items->Clear();
-    zapcomboBox1->Items->Clear();
-    zapcomboBox2->Items->Clear();
-
-    
-
-    for (int i = 0; i < n; i++)
-    {
-        String^ temp;
-        for (int j = 0; j < wcslen(dl[0].dl_title); j++)
-        {
-            temp += dl[0].dl_title[j];
-        }
-        pers1comboBox->Items->Add(temp);
-
-    }
-
-    for (int i = 0; i < n; i++)
-    {
-        pers2comboBox->Items->Add(cab[i].cabnum);
-    }
-
-    for (int i = 0; i < n; i++)
-    {
-        String^ temp;
-        for (int j = 0; j < wcslen(usl[0].u_title); j++)
-        {
-            temp += usl[0].u_title[j];
-        }
-        zapcomboBox1->Items->Add(temp);
-
-    }
-
-    for (int i = 0; i < n; i++)
-    {
-        String^ temp;
-        for (int j = 0; j < wcslen(pers[i].d_fio); j++)
-        {
-            temp += pers[i].d_fio[j];
-        }
-        zapcomboBox2->Items->Add(temp);
-
-    }
-
   
 }
 System::Void Project2::MyForm::zapcomboBox2_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e)
@@ -307,6 +262,18 @@ System::Void Project2::MyForm::perspodbut_Click(System::Object^ sender, System::
             dataGridView1[4, n]->Value = Convert::ToString(pers[n].cabnum);  
 
             n++;
+
+            zapcomboBox2->Items->Clear();
+            for (int i = 0; i < n; i++)
+            {
+                String^ temp;
+                for (int j = 0; j < wcslen(pers[i].d_fio); j++)
+                {
+                    temp += pers[i].d_fio[j];
+                }
+                zapcomboBox2->Items->Add(temp);
+
+            }
         }
     }
     else if (rez == 2)
@@ -358,6 +325,17 @@ System::Void Project2::MyForm::perspodbut_Click(System::Object^ sender, System::
                 numd_dolzn++;
             }
 
+            zapcomboBox2->Items->Clear();
+            for (int i = 0; i < n; i++)
+            {
+                String^ temp;
+                for (int j = 0; j < wcslen(pers[i].d_fio); j++)
+                {
+                    temp += pers[i].d_fio[j];
+                }
+                zapcomboBox2->Items->Add(temp);
+
+            }
         }
     }
 }
