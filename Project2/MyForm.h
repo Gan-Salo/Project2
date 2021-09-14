@@ -425,6 +425,7 @@ private: System::Windows::Forms::TextBox^ textBox6;
 			this->TabControl->SelectedIndex = 0;
 			this->TabControl->Size = System::Drawing::Size(997, 535);
 			this->TabControl->TabIndex = 0;
+			this->TabControl->Selecting += gcnew System::Windows::Forms::TabControlCancelEventHandler(this, &MyForm::TabControl_Selecting);
 			// 
 			// tabPage1
 			// 
@@ -505,6 +506,7 @@ private: System::Windows::Forms::TextBox^ textBox6;
 			this->persbutton2->TabIndex = 3;
 			this->persbutton2->Text = L"Изменение";
 			this->persbutton2->UseVisualStyleBackColor = false;
+			this->persbutton2->Click += gcnew System::EventHandler(this, &MyForm::persbutton2_Click);
 			// 
 			// Datapanel
 			// 
@@ -1840,5 +1842,8 @@ private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e);
 private: System::Void zapcomboBox2_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e);
 private: System::Void perspodbut_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void persbutton1_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void TabControl_Selecting(System::Object^ sender, System::Windows::Forms::TabControlCancelEventArgs^ e);
+private: System::Void persbutton2_Click(System::Object^ sender, System::EventArgs^ e);
+
 };
 }

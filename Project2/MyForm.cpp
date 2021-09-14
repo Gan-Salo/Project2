@@ -171,48 +171,23 @@ System::Void Project2::MyForm::MyForm_Load(System::Object^ sender, System::Event
         zapcomboBox2->Items->Add(temp);
         
     }
-    //zapcomboBox3->Text += pers[0].cabnum;
-    //textBox7->Text += pers[0].cabnum;
-
+    
     for (int i = 0; i < 1; i++)
     {
         String^ temp;
         for (int j = 0; j < wcslen(pers[0].d_fio); j++)
         {
             temp += pers[0].d_fio[j];
-        }
-        //zapcomboBox3->Items->Add(temp);
+        }        
 
     }
-    /*for (int i = 0; i < 1; i++)
-    {
-        String^ temp;
-        for (int j = 0; j < wcslen(ins[i].fio); j++)
-        {
-            temp += ins[i].fio[j];
-        }
-        comboBox2->Items->Add(temp);
-    }
-    comboBox3->Items->Add("1");
-    comboBox3->Items->Add("2");
-    for (int i = 0; i < n_c; i++)
-    {
-        String^ temp;
-        for (int j = 0; j < wcslen(cr[i].num); j++)
-        {
-            temp += cr[i].num[j];
-        }
-        comboBox4->Items->Add(temp);
-    }
-
-    for (int i = 0; i < wcslen(dl[0].dl_title); i++)
-    {
-        String^ dl[i] = Convert::ToString(dl[0].dl_title[i]);
-        pers1comboBox->Items->Add(Convert::ToString(dl[0].dl_title[i]));
-    }*/
-    //pers1comboBox->Items->Add(dl[0].dl_title[20]);
+   
 }
 
+System::Void Project2::MyForm::TabControl_Selecting(System::Object^ sender, System::Windows::Forms::TabControlCancelEventArgs^ e) {
+
+    
+}
 System::Void Project2::MyForm::zapcomboBox2_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e)
 {   
     int s;
@@ -289,9 +264,65 @@ System::Void Project2::MyForm::perspodbut_Click(System::Object^ sender, System::
             n++;
         }
     }
+    else if (rez == 2)
+    {       
+        int cur = dataGridView1->CurrentRow->Index;
+
+        int numd_fio = 0, numd_tel = 0, numd_dolzn = 0;
+
+        if (PersTextBox1->Text == "" || PersTextBox2->Text == "" || PersTextBox3->Text == "" || pers1comboBox->Text == "" || pers2comboBox->Text == "")
+        {
+            MessageBox::Show("Ошибка! Все поля должны быть заполнены!");
+        }
+        else
+        {
+
+            dataGridView1[0, cur]->Value = Convert::ToString(PersTextBox1->Text);
+            dataGridView1[1, cur]->Value = Convert::ToString(PersTextBox2->Text);
+            dataGridView1[2, cur]->Value = Convert::ToString(PersTextBox3->Text);
+            dataGridView1[3, cur]->Value = Convert::ToString(pers1comboBox->Text);
+            dataGridView1[4, cur]->Value = Convert::ToString(pers2comboBox->Text);
+            
+
+            memset(&pers[cur], 0, sizeof(pers[cur]));
+
+            for (int i = 0; i < this->PersTextBox1->Text->Length; i++)
+            {
+                pers[n].d_fio[i] = this->PersTextBox1->Text[i];
+                numd_fio++;
+            }
+
+            try
+            {
+                pers[n].d_age = Convert::ToInt32(this->PersTextBox2->Text);
+            }
+            catch (...)
+            {
+                MessageBox::Show("Ошибка! В поле 'Возраст' должны быть введены только числовые значения.");
+                return;
+            }
+
+            for (int i = 0; i < this->PersTextBox3->Text->Length; i++)
+            {
+                pers[n].d_tel[i] = this->PersTextBox3->Text[i];
+                numd_tel++;
+            }
+
+            for (int i = 0; i < this->pers1comboBox->Text->Length; i++)
+            {
+                pers[n].d_dolzn[i] = this->pers1comboBox->Text[i];
+                numd_dolzn++;
+            }
+
+        }
+    }
 }
 
 
 System::Void Project2::MyForm::persbutton1_Click(System::Object^ sender, System::EventArgs^ e) {
     rez = 1;
+}
+
+System::Void Project2::MyForm::persbutton2_Click(System::Object^ sender, System::EventArgs^ e) {
+    rez = 2;
 }
