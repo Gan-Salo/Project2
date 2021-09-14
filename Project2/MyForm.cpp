@@ -6,8 +6,7 @@
 
 using namespace Project2; // Название проекта
 
-int f_p = 0, f_z = 0, f_c = 0, f_u = 0, f_d = 0;
-int rez = 0, n = 1;
+int rez = 0, n = 1, n_d = 1;
 
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	Application::EnableVisualStyles();
@@ -340,7 +339,6 @@ System::Void Project2::MyForm::perspodbut_Click(System::Object^ sender, System::
     }
 }
 
-
 System::Void Project2::MyForm::persbutton1_Click(System::Object^ sender, System::EventArgs^ e) {
     rez = 1;
 }
@@ -387,3 +385,142 @@ System::Void Project2::MyForm::persbutton3_Click(System::Object^ sender, System:
 
     }
 }
+
+System::Void Project2::MyForm::dlbut1_Click(System::Object^ sender, System::EventArgs^ e) { rez = 1; };
+System::Void Project2::MyForm::dlbut2_Click(System::Object^ sender, System::EventArgs^ e) { rez = 2; };
+System::Void Project2::MyForm::dlbut3_Click(System::Object^ sender, System::EventArgs^ e) {
+    int delposition = -1;
+    int count = dataGridView5->RowCount;
+    int cur = dataGridView5->CurrentRow->Index;
+    strnum->Text = Convert::ToString(count + 1);
+
+    delposition = cur;
+
+    dataGridView5->Rows->RemoveAt(cur);
+    dataGridView5->Refresh();
+
+    if (cur + 1 == count)
+    {
+        count--;
+    }
+    else
+    {
+        for (int i = cur; i < count - 1; i++)
+        {
+            dl[i] = dl[i + 1];
+        }
+        count--;
+        n_d--;
+    }
+
+    pers1comboBox->Items->Clear();
+    for (int i = 0; i < n_d; i++)
+    {
+        String^ temp;
+        for (int j = 0; j < wcslen(dl[i].dl_title); j++)
+        {
+            temp += dl[i].dl_title[j];
+        }
+        pers1comboBox->Items->Add(temp);
+
+    }
+};
+
+System::Void Project2::MyForm::dlpodtbut_Click(System::Object^ sender, System::EventArgs^ e) {
+    if (rez == 1)
+    {
+
+        int numdolzn = 0, numtype = 0;
+        if (dltextbox1->Text == "" || dlcomboBox1->Text == "")
+        {
+            MessageBox::Show("Ошибка! Все поля должны быть заполнены!");
+        }
+        else
+        {
+          
+            for (int i = 0; i < this->dltextbox1->Text->Length; i++)
+            {
+                dl[n_d].dl_title[i] = this->dltextbox1->Text[i];
+                numdolzn++;
+            }
+
+            for (int i = 0; i < this->dlcomboBox1->Text->Length; i++)
+            {
+                dl[n_d].dl_type[i] = this->dlcomboBox1->Text[i];
+                numtype++;
+            }
+           
+            //Запись в таблицу
+            dataGridView5->Rows->Add();
+
+            for (int m = 0; m < numdolzn; m++)
+            {
+                dataGridView5[0, n_d]->Value += Convert::ToString(dl[n_d].dl_title[m]);
+                
+            }
+           
+            for (int m = 0; m < numtype; m++)
+            {
+                dataGridView5[1, n_d]->Value += Convert::ToString(dl[n_d].dl_type[m]);
+                
+            }
+
+            n_d++;
+
+            pers1comboBox->Items->Clear();
+            for (int i = 0; i < n_d; i++)
+            {
+                String^ temp;
+                for (int j = 0; j < wcslen(dl[i].dl_title); j++)
+                {
+                    temp += dl[i].dl_title[j];
+                }
+                pers1comboBox->Items->Add(temp);
+            }
+        }
+    }
+    else if (rez == 2)
+    {
+        int cur = dataGridView5->CurrentRow->Index;
+
+        int numdolzn = 0, numtype = 0;
+
+        if (dltextbox1->Text == "" || dlcomboBox1->Text == "")
+        {
+            MessageBox::Show("Ошибка! Все поля должны быть заполнены!");
+        }
+        else
+        {
+
+            dataGridView5[0, cur]->Value = Convert::ToString(dltextbox1->Text);
+            dataGridView5[1, cur]->Value = Convert::ToString(dlcomboBox1->Text);            
+
+            memset(&dl[cur], 0, sizeof(dl[cur]));           
+
+            for (int i = 0; i < this->dltextbox1->Text->Length; i++)
+            {
+                dl[cur].dl_title[i] = this->dltextbox1->Text[i];
+                numdolzn++;
+            }
+
+            for (int i = 0; i < this->dlcomboBox1->Text->Length; i++)
+            {
+                dl[cur].dl_type[i] = this->dlcomboBox1->Text[i];
+                numtype++;
+            }
+
+            pers1comboBox->Items->Clear();
+            for (int i = 0; i < n_d; i++)
+            {
+                String^ temp;
+                for (int j = 0; j < wcslen(dl[i].dl_title); j++)
+                {
+                    temp += dl[i].dl_title[j];
+                }
+                pers1comboBox->Items->Add(temp);
+
+            }
+        }
+    }
+};
+System::Void Project2::MyForm::dlcancbut_Click(System::Object^ sender, System::EventArgs^ e) {};
