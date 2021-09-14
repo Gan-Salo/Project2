@@ -130,8 +130,8 @@ namespace Project2 {
 	private: System::Windows::Forms::Label^ label14;
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button4;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn6;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn10;
+
+
 	private: System::Windows::Forms::Panel^ panel21;
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::Label^ label15;
@@ -148,7 +148,7 @@ namespace Project2 {
 	private: System::Windows::Forms::Panel^ panel23;
 	private: System::Windows::Forms::Button^ button17;
 	private: System::Windows::Forms::Panel^ panel24;
-	private: System::Windows::Forms::ComboBox^ comboBox5;
+
 	private: System::Windows::Forms::Label^ label17;
 	private: System::Windows::Forms::Panel^ panel25;
 	private: System::Windows::Forms::Label^ label18;
@@ -164,8 +164,8 @@ private: System::Windows::Forms::Panel^ panel26;
 private: System::Windows::Forms::Label^ label19;
 private: System::Windows::Forms::Label^ label20;
 private: System::Windows::Forms::DataGridView^ dataGridView5;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn8;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn9;
+
+
 private: System::Windows::Forms::Panel^ panel27;
 private: System::Windows::Forms::Button^ button23;
 private: System::Windows::Forms::Button^ button24;
@@ -182,6 +182,11 @@ private: System::Windows::Forms::Button^ button20;
 private: System::Windows::Forms::Button^ button22;
 private: System::Windows::Forms::Button^ button21;
 private: System::Windows::Forms::TextBox^ textBox5;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn10;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn6;
+private: System::Windows::Forms::TextBox^ textBox6;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn8;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn9;
 
 
 
@@ -284,8 +289,6 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
 			this->comboBox4 = (gcnew System::Windows::Forms::ComboBox());
-			this->dataGridViewTextBoxColumn6 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->dataGridViewTextBoxColumn10 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->panel21 = (gcnew System::Windows::Forms::Panel());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->label15 = (gcnew System::Windows::Forms::Label());
@@ -301,7 +304,6 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			this->label17 = (gcnew System::Windows::Forms::Label());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->panel25 = (gcnew System::Windows::Forms::Panel());
-			this->comboBox5 = (gcnew System::Windows::Forms::ComboBox());
 			this->label18 = (gcnew System::Windows::Forms::Label());
 			this->button18 = (gcnew System::Windows::Forms::Button());
 			this->button19 = (gcnew System::Windows::Forms::Button());
@@ -316,8 +318,6 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			this->label19 = (gcnew System::Windows::Forms::Label());
 			this->label20 = (gcnew System::Windows::Forms::Label());
 			this->dataGridView5 = (gcnew System::Windows::Forms::DataGridView());
-			this->dataGridViewTextBoxColumn8 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->dataGridViewTextBoxColumn9 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->button20 = (gcnew System::Windows::Forms::Button());
 			this->button21 = (gcnew System::Windows::Forms::Button());
 			this->button22 = (gcnew System::Windows::Forms::Button());
@@ -334,6 +334,11 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			this->label23 = (gcnew System::Windows::Forms::Label());
 			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+			this->dataGridViewTextBoxColumn10 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->dataGridViewTextBoxColumn6 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+			this->dataGridViewTextBoxColumn8 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->dataGridViewTextBoxColumn9 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->TabControl->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			this->tabPage3->SuspendLayout();
@@ -578,9 +583,9 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			this->Tabchlabel->AutoSize = true;
 			this->Tabchlabel->Location = System::Drawing::Point(8, 6);
 			this->Tabchlabel->Name = L"Tabchlabel";
-			this->Tabchlabel->Size = System::Drawing::Size(91, 13);
+			this->Tabchlabel->Size = System::Drawing::Size(105, 13);
 			this->Tabchlabel->TabIndex = 18;
-			this->Tabchlabel->Text = L"Номер кабинета";
+			this->Tabchlabel->Text = L"Кабинет работника";
 			// 
 			// panel6
 			// 
@@ -970,8 +975,8 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			// 
 			this->dataGridView3->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView3->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(2) {
-				this->dataGridViewTextBoxColumn6,
-					this->dataGridViewTextBoxColumn10
+				this->dataGridViewTextBoxColumn10,
+					this->dataGridViewTextBoxColumn6
 			});
 			this->dataGridView3->Location = System::Drawing::Point(6, 6);
 			this->dataGridView3->Name = L"dataGridView3";
@@ -1253,18 +1258,6 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			this->comboBox4->Size = System::Drawing::Size(247, 21);
 			this->comboBox4->TabIndex = 22;
 			// 
-			// dataGridViewTextBoxColumn6
-			// 
-			this->dataGridViewTextBoxColumn6->HeaderText = L"ФИО закреплённого за кабинетом врача";
-			this->dataGridViewTextBoxColumn6->Name = L"dataGridViewTextBoxColumn6";
-			this->dataGridViewTextBoxColumn6->Width = 500;
-			// 
-			// dataGridViewTextBoxColumn10
-			// 
-			this->dataGridViewTextBoxColumn10->HeaderText = L"Номер кабинета";
-			this->dataGridViewTextBoxColumn10->Name = L"dataGridViewTextBoxColumn10";
-			this->dataGridViewTextBoxColumn10->Width = 200;
-			// 
 			// panel21
 			// 
 			this->panel21->BackColor = System::Drawing::SystemColors::ControlLight;
@@ -1392,7 +1385,7 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			// 
 			this->panel24->BackColor = System::Drawing::SystemColors::Control;
 			this->panel24->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->panel24->Controls->Add(this->comboBox5);
+			this->panel24->Controls->Add(this->textBox6);
 			this->panel24->Controls->Add(this->label17);
 			this->panel24->Location = System::Drawing::Point(0, 148);
 			this->panel24->Name = L"panel24";
@@ -1425,16 +1418,6 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			this->panel25->Name = L"panel25";
 			this->panel25->Size = System::Drawing::Size(271, 70);
 			this->panel25->TabIndex = 28;
-			// 
-			// comboBox5
-			// 
-			this->comboBox5->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
-			this->comboBox5->FormattingEnabled = true;
-			this->comboBox5->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"", L"Мультимедийная", L"Не-Мультимедийная" });
-			this->comboBox5->Location = System::Drawing::Point(11, 38);
-			this->comboBox5->Name = L"comboBox5";
-			this->comboBox5->Size = System::Drawing::Size(247, 21);
-			this->comboBox5->TabIndex = 20;
 			// 
 			// label18
 			// 
@@ -1553,18 +1536,6 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			this->dataGridView5->Size = System::Drawing::Size(699, 444);
 			this->dataGridView5->TabIndex = 40;
 			// 
-			// dataGridViewTextBoxColumn8
-			// 
-			this->dataGridViewTextBoxColumn8->HeaderText = L"Название услуги";
-			this->dataGridViewTextBoxColumn8->Name = L"dataGridViewTextBoxColumn8";
-			this->dataGridViewTextBoxColumn8->Width = 500;
-			// 
-			// dataGridViewTextBoxColumn9
-			// 
-			this->dataGridViewTextBoxColumn9->HeaderText = L"Стоимость услуги";
-			this->dataGridViewTextBoxColumn9->Name = L"dataGridViewTextBoxColumn9";
-			this->dataGridViewTextBoxColumn9->Width = 200;
-			// 
 			// button20
 			// 
 			this->button20->BackColor = System::Drawing::SystemColors::ButtonFace;
@@ -1679,7 +1650,7 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			// 
 			this->comboBox6->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->comboBox6->FormattingEnabled = true;
-			this->comboBox6->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"", L"Мультимедийная", L"Не-Мультимедийная" });
+			this->comboBox6->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Мед. работник", L"Бухгалтерия", L"Уборка помещений" });
 			this->comboBox6->Location = System::Drawing::Point(11, 38);
 			this->comboBox6->Name = L"comboBox6";
 			this->comboBox6->Size = System::Drawing::Size(247, 21);
@@ -1690,9 +1661,9 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			this->label22->AutoSize = true;
 			this->label22->Location = System::Drawing::Point(9, 13);
 			this->label22->Name = L"label22";
-			this->label22->Size = System::Drawing::Size(98, 13);
+			this->label22->Size = System::Drawing::Size(84, 13);
 			this->label22->TabIndex = 15;
-			this->label22->Text = L"Стоимость услуги";
+			this->label22->Text = L"Тип должности";
 			// 
 			// panel30
 			// 
@@ -1710,9 +1681,9 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			this->label23->AutoSize = true;
 			this->label23->Location = System::Drawing::Point(9, 8);
 			this->label23->Name = L"label23";
-			this->label23->Size = System::Drawing::Size(93, 13);
+			this->label23->Size = System::Drawing::Size(115, 13);
 			this->label23->TabIndex = 7;
-			this->label23->Text = L"Название услуги";
+			this->label23->Text = L"Название должности";
 			// 
 			// textBox4
 			// 
@@ -1727,6 +1698,37 @@ private: System::Windows::Forms::TextBox^ textBox5;
 			this->textBox5->Name = L"textBox5";
 			this->textBox5->Size = System::Drawing::Size(247, 20);
 			this->textBox5->TabIndex = 13;
+			// 
+			// dataGridViewTextBoxColumn10
+			// 
+			this->dataGridViewTextBoxColumn10->HeaderText = L"Номер кабинета";
+			this->dataGridViewTextBoxColumn10->Name = L"dataGridViewTextBoxColumn10";
+			this->dataGridViewTextBoxColumn10->Width = 350;
+			// 
+			// dataGridViewTextBoxColumn6
+			// 
+			this->dataGridViewTextBoxColumn6->HeaderText = L"Площадь кабинета";
+			this->dataGridViewTextBoxColumn6->Name = L"dataGridViewTextBoxColumn6";
+			this->dataGridViewTextBoxColumn6->Width = 350;
+			// 
+			// textBox6
+			// 
+			this->textBox6->Location = System::Drawing::Point(11, 34);
+			this->textBox6->Name = L"textBox6";
+			this->textBox6->Size = System::Drawing::Size(247, 20);
+			this->textBox6->TabIndex = 16;
+			// 
+			// dataGridViewTextBoxColumn8
+			// 
+			this->dataGridViewTextBoxColumn8->HeaderText = L"Название должности";
+			this->dataGridViewTextBoxColumn8->Name = L"dataGridViewTextBoxColumn8";
+			this->dataGridViewTextBoxColumn8->Width = 400;
+			// 
+			// dataGridViewTextBoxColumn9
+			// 
+			this->dataGridViewTextBoxColumn9->HeaderText = L"Тип должности";
+			this->dataGridViewTextBoxColumn9->Name = L"dataGridViewTextBoxColumn9";
+			this->dataGridViewTextBoxColumn9->Width = 300;
 			// 
 			// MyForm
 			// 

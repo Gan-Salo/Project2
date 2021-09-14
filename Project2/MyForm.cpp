@@ -16,15 +16,15 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 struct Personal {
 
 	wchar_t d_fio[40];
-	int p_age;
+	int d_age;
 	wchar_t d_tel[20];
-	wchar_t d_dolzn[20];
+	wchar_t d_dolzn[30];
 	int cabnum;
 } pers[100];
 
 struct Cabin {
 	int cabnum;
-	wchar_t d_fio[40];
+	int cabarea;
 } cab[40];
 
 struct Zapis {
@@ -45,13 +45,15 @@ struct Patient {
 struct Uslyg {
 
 	wchar_t u_title[50];
-	int cabnum;
+	int cost;
 
 } usl[100];
 
 struct Dolzn {
 
 	wchar_t dl_title[50];
-	int kolvo;
+	wchar_t dl_type[50];
 
 } dl[100];
+
+
