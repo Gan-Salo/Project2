@@ -299,13 +299,13 @@ System::Void Project2::MyForm::perspodbut_Click(System::Object^ sender, System::
 
             for (int i = 0; i < this->PersTextBox1->Text->Length; i++)
             {
-                pers[n].d_fio[i] = this->PersTextBox1->Text[i];
+                pers[cur].d_fio[i] = this->PersTextBox1->Text[i];
                 numd_fio++;
             }
 
             try
             {
-                pers[n].d_age = Convert::ToInt32(this->PersTextBox2->Text);
+                pers[cur].d_age = Convert::ToInt32(this->PersTextBox2->Text);
             }
             catch (...)
             {
@@ -315,13 +315,13 @@ System::Void Project2::MyForm::perspodbut_Click(System::Object^ sender, System::
 
             for (int i = 0; i < this->PersTextBox3->Text->Length; i++)
             {
-                pers[n].d_tel[i] = this->PersTextBox3->Text[i];
+                pers[cur].d_tel[i] = this->PersTextBox3->Text[i];
                 numd_tel++;
             }
 
             for (int i = 0; i < this->pers1comboBox->Text->Length; i++)
             {
-                pers[n].d_dolzn[i] = this->pers1comboBox->Text[i];
+                pers[cur].d_dolzn[i] = this->pers1comboBox->Text[i];
                 numd_dolzn++;
             }
 
@@ -347,4 +347,43 @@ System::Void Project2::MyForm::persbutton1_Click(System::Object^ sender, System:
 
 System::Void Project2::MyForm::persbutton2_Click(System::Object^ sender, System::EventArgs^ e) {
     rez = 2;
+}
+
+System::Void Project2::MyForm::persbutton3_Click(System::Object^ sender, System::EventArgs^ e) {
+    
+    int delposition = -1;
+    int count = dataGridView1->RowCount;
+    int cur = dataGridView1->CurrentRow->Index;
+    strnum->Text = Convert::ToString(count + 1);
+
+    delposition = cur;
+
+    dataGridView1->Rows->RemoveAt(cur);
+    dataGridView1->Refresh();
+
+    if (cur + 1 == count)
+    {
+        count--;
+    }
+    else
+    {
+        for (int i = cur; i < count - 1; i++)
+        {
+            pers[i] = pers[i + 1];
+        }
+        count--;
+        n--;
+    }
+    
+    zapcomboBox2->Items->Clear();
+    for (int i = 0; i < n; i++)
+    {
+        String^ temp;
+        for (int j = 0; j < wcslen(pers[i].d_fio); j++)
+        {
+            temp += pers[i].d_fio[j];
+        }
+        zapcomboBox2->Items->Add(temp);
+
+    }
 }

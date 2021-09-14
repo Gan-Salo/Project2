@@ -496,6 +496,7 @@ private: System::Windows::Forms::TextBox^ textBox6;
 			this->persbutton3->TabIndex = 4;
 			this->persbutton3->Text = L"Удаление";
 			this->persbutton3->UseVisualStyleBackColor = false;
+			this->persbutton3->Click += gcnew System::EventHandler(this, &MyForm::persbutton3_Click);
 			// 
 			// persbutton2
 			// 
@@ -1844,6 +1845,6 @@ private: System::Void perspodbut_Click(System::Object^ sender, System::EventArgs
 private: System::Void persbutton1_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void TabControl_Selecting(System::Object^ sender, System::Windows::Forms::TabControlCancelEventArgs^ e);
 private: System::Void persbutton2_Click(System::Object^ sender, System::EventArgs^ e);
-
+private: System::Void persbutton3_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }
