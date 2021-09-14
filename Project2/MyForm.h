@@ -184,9 +184,11 @@ private: System::Windows::Forms::Button^ button21;
 private: System::Windows::Forms::TextBox^ textBox5;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn10;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn6;
-private: System::Windows::Forms::TextBox^ textBox6;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn8;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn9;
+private: System::Windows::Forms::TextBox^ textBox6;
+
+
 
 
 
@@ -323,8 +325,6 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxC
 			this->label19 = (gcnew System::Windows::Forms::Label());
 			this->label20 = (gcnew System::Windows::Forms::Label());
 			this->dataGridView5 = (gcnew System::Windows::Forms::DataGridView());
-			this->dataGridViewTextBoxColumn8 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->dataGridViewTextBoxColumn9 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->panel27 = (gcnew System::Windows::Forms::Panel());
 			this->button23 = (gcnew System::Windows::Forms::Button());
 			this->button24 = (gcnew System::Windows::Forms::Button());
@@ -340,6 +340,8 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxC
 			this->button20 = (gcnew System::Windows::Forms::Button());
 			this->button22 = (gcnew System::Windows::Forms::Button());
 			this->button21 = (gcnew System::Windows::Forms::Button());
+			this->dataGridViewTextBoxColumn8 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->dataGridViewTextBoxColumn9 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->TabControl->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			this->panel9->SuspendLayout();
@@ -1564,18 +1566,6 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxC
 			this->dataGridView5->Size = System::Drawing::Size(699, 444);
 			this->dataGridView5->TabIndex = 40;
 			// 
-			// dataGridViewTextBoxColumn8
-			// 
-			this->dataGridViewTextBoxColumn8->HeaderText = L"Название должности";
-			this->dataGridViewTextBoxColumn8->Name = L"dataGridViewTextBoxColumn8";
-			this->dataGridViewTextBoxColumn8->Width = 400;
-			// 
-			// dataGridViewTextBoxColumn9
-			// 
-			this->dataGridViewTextBoxColumn9->HeaderText = L"Тип должности";
-			this->dataGridViewTextBoxColumn9->Name = L"dataGridViewTextBoxColumn9";
-			this->dataGridViewTextBoxColumn9->Width = 300;
-			// 
 			// panel27
 			// 
 			this->panel27->BackColor = System::Drawing::SystemColors::ControlLight;
@@ -1657,7 +1647,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxC
 			// 
 			this->comboBox6->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->comboBox6->FormattingEnabled = true;
-			this->comboBox6->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Мед. работник", L"Бухгалтерия", L"Уборка помещений" });
+			this->comboBox6->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Мед. персонал", L"Бухгалтерия", L"Уборка помещений" });
 			this->comboBox6->Location = System::Drawing::Point(11, 38);
 			this->comboBox6->Name = L"comboBox6";
 			this->comboBox6->Size = System::Drawing::Size(247, 21);
@@ -1668,9 +1658,9 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxC
 			this->label22->AutoSize = true;
 			this->label22->Location = System::Drawing::Point(9, 13);
 			this->label22->Name = L"label22";
-			this->label22->Size = System::Drawing::Size(84, 13);
+			this->label22->Size = System::Drawing::Size(87, 13);
 			this->label22->TabIndex = 15;
-			this->label22->Text = L"Тип должности";
+			this->label22->Text = L"Подразделение";
 			// 
 			// panel30
 			// 
@@ -1731,6 +1721,18 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxC
 			this->button21->TabIndex = 45;
 			this->button21->Text = L"Удаление";
 			this->button21->UseVisualStyleBackColor = false;
+			// 
+			// dataGridViewTextBoxColumn8
+			// 
+			this->dataGridViewTextBoxColumn8->HeaderText = L"Название должности";
+			this->dataGridViewTextBoxColumn8->Name = L"dataGridViewTextBoxColumn8";
+			this->dataGridViewTextBoxColumn8->Width = 400;
+			// 
+			// dataGridViewTextBoxColumn9
+			// 
+			this->dataGridViewTextBoxColumn9->HeaderText = L"Подразделение";
+			this->dataGridViewTextBoxColumn9->Name = L"dataGridViewTextBoxColumn9";
+			this->dataGridViewTextBoxColumn9->Width = 300;
 			// 
 			// MyForm
 			// 
@@ -1814,5 +1816,6 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxC
 	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e);
+
 };
 }
