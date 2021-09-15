@@ -6,7 +6,7 @@
 
 using namespace Project2; // Название проекта
 
-int rez = 0, n = 1, n_d = 1;
+int rez = 0, n = 1, n_d = 1, n_u = 1, n_c = 1;
 
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	Application::EnableVisualStyles();
@@ -36,13 +36,6 @@ struct Zapis {
 	int p_age;
 	int cabnum;
 } zap[100];
-
-struct Patient {
-
-	wchar_t p_fio[40];
-	int p_age;
-	wchar_t p_tel[20];
-} pt[100];
 
 struct Uslyg {
 
@@ -524,3 +517,289 @@ System::Void Project2::MyForm::dlpodtbut_Click(System::Object^ sender, System::E
     }
 };
 System::Void Project2::MyForm::dlcancbut_Click(System::Object^ sender, System::EventArgs^ e) {};
+
+System::Void Project2::MyForm::uslbut1_Click(System::Object^ sender, System::EventArgs^ e) { rez = 1; };
+System::Void Project2::MyForm::uslbut2_Click(System::Object^ sender, System::EventArgs^ e) { rez = 2; };
+System::Void Project2::MyForm::uslbut3_Click(System::Object^ sender, System::EventArgs^ e) {
+    
+    int delposition = -1;
+    int count = dataGridView4->RowCount;
+    int cur = dataGridView4->CurrentRow->Index;
+    strnum->Text = Convert::ToString(count + 1);
+
+    delposition = cur;
+
+    dataGridView4->Rows->RemoveAt(cur);
+    dataGridView4->Refresh();
+
+    if (cur + 1 == count)
+    {
+        count--;
+    }
+    else
+    {
+        for (int i = cur; i < count - 1; i++)
+        {
+            usl[i] = usl[i + 1];
+        }
+        count--;
+        n_u--;
+    }
+
+    zapcomboBox1->Items->Clear();
+    for (int i = 0; i < n_u; i++)
+    {
+        String^ temp;
+        for (int j = 0; j < wcslen(usl[i].u_title); j++)
+        {
+            temp += usl[i].u_title[j];
+        }
+        zapcomboBox1->Items->Add(temp);
+
+    }
+};
+System::Void Project2::MyForm::uslpodtbut_Click(System::Object^ sender, System::EventArgs^ e) {
+    
+    if (rez == 1)
+    {
+
+        int numusl = 0;
+        if (usltextbox1->Text == "" || usltextbox2->Text == "")
+        {
+            MessageBox::Show("Ошибка! Все поля должны быть заполнены!");
+        }
+        else
+        {
+
+            for (int i = 0; i < this->usltextbox1->Text->Length; i++)
+            {
+                usl[n_u].u_title[i] = this->usltextbox1->Text[i];
+                numusl++;
+            }
+
+            try
+            {
+                usl[n_u].cost = Convert::ToInt32(this->usltextbox2->Text);
+            }
+            catch (...)
+            {
+                MessageBox::Show("Ошибка! В поле 'Стоимость услуги' должны быть введены только числовые значения.");
+                return;
+            }
+
+            //Запись в таблицу
+            dataGridView4->Rows->Add();
+
+            for (int m = 0; m < numusl; m++)
+            {
+                dataGridView4[0, n_u]->Value += Convert::ToString(usl[n_u].u_title[m]);
+
+            }
+
+            dataGridView4[1, n_u]->Value = Convert::ToString(usl[n_u].cost);
+
+            n_u++;
+
+            zapcomboBox1->Items->Clear();
+            for (int i = 0; i < n_u; i++)
+            {
+                String^ temp;
+                for (int j = 0; j < wcslen(usl[i].u_title); j++)
+                {
+                    temp += usl[i].u_title[j];
+                }
+                zapcomboBox1->Items->Add(temp);
+            }
+        }
+    }
+    else if (rez == 2)
+    {
+        int cur = dataGridView4->CurrentRow->Index;
+
+        int numusl = 0;
+
+        if (usltextbox1->Text == "" || usltextbox2->Text == "")
+        {
+            MessageBox::Show("Ошибка! Все поля должны быть заполнены!");
+        }
+        else
+        {
+
+            dataGridView4[0, cur]->Value = Convert::ToString(usltextbox1->Text);
+            dataGridView4[1, cur]->Value = Convert::ToString(usltextbox2->Text);
+
+            memset(&usl[cur], 0, sizeof(usl[cur]));
+
+            for (int i = 0; i < this->usltextbox1->Text->Length; i++)
+            {
+                usl[cur].u_title[i] = this->usltextbox1->Text[i];
+                numusl++;
+            }
+
+            try
+            {
+                usl[cur].cost = Convert::ToInt32(this->usltextbox2->Text);
+            }
+            catch (...)
+            {
+                MessageBox::Show("Ошибка! В поле 'Стоимость услуги' должны быть введены только числовые значения.");
+                return;
+            }
+           
+            zapcomboBox1->Items->Clear();
+            for (int i = 0; i < n_u; i++)
+            {
+                String^ temp;
+                for (int j = 0; j < wcslen(usl[i].u_title); j++)
+                {
+                    temp += usl[i].u_title[j];
+                }
+                zapcomboBox1->Items->Add(temp);
+            }
+        }
+    }
+};
+System::Void Project2::MyForm::uslcancbut_Click(System::Object^ sender, System::EventArgs^ e) {};
+
+System::Void Project2::MyForm::cabbut1_Click(System::Object^ sender, System::EventArgs^ e) { rez = 1; };
+System::Void Project2::MyForm::cabbut2_Click(System::Object^ sender, System::EventArgs^ e) { rez = 2; };
+System::Void Project2::MyForm::cabbut3_Click(System::Object^ sender, System::EventArgs^ e) {
+    
+    int delposition = -1;
+    int count = dataGridView3->RowCount;
+    int cur = dataGridView3->CurrentRow->Index;
+    strnum->Text = Convert::ToString(count + 1);
+
+    delposition = cur;
+
+    dataGridView3->Rows->RemoveAt(cur);
+    dataGridView3->Refresh();
+
+    if (cur + 1 == count)
+    {
+        count--;
+    }
+    else
+    {
+        for (int i = cur; i < count - 1; i++)
+        {
+            cab[i] = cab[i + 1];
+        }
+        count--;
+        n_c--;
+    }
+
+    pers2comboBox->Items->Clear();
+    for (int i = 0; i < n_c; i++)
+    {
+        String^ temp;
+        for (int j = 0; j < cab[i].cabnum; j++)
+        {
+            temp = Convert::ToString(cab[i].cabnum);
+        }
+        pers2comboBox->Items->Add(temp);
+    }
+};
+System::Void Project2::MyForm::cabpodbut_Click(System::Object^ sender, System::EventArgs^ e) {
+    
+    if (rez == 1)
+    {
+
+       
+        if (cabtextBox1->Text == "" || cabtextBox2->Text == "")
+        {
+            MessageBox::Show("Ошибка! Все поля должны быть заполнены!");
+        }
+        else
+        {
+
+            try
+            {
+                cab[n_c].cabnum = Convert::ToInt32(this->cabtextBox1->Text);
+            }
+            catch (...)
+            {
+                MessageBox::Show("Ошибка! В поле 'Номер кабинета' должны быть введены только числовые значения.");
+                return;
+            }
+
+            try
+            {
+                cab[n_c].cabarea = Convert::ToInt32(this->cabtextBox2->Text);
+            }
+            catch (...)
+            {
+                MessageBox::Show("Ошибка! В поле 'Площадь кабинета' должны быть введены только числовые значения.");
+                return;
+            }
+
+            //Запись в таблицу
+            dataGridView3->Rows->Add();
+          
+            dataGridView3[0, n_c]->Value = Convert::ToString(cab[n_c].cabnum);
+            dataGridView3[1, n_c]->Value = Convert::ToString(cab[n_c].cabarea);
+
+            n_c++;
+
+            pers2comboBox->Items->Clear();
+            for (int i = 0; i < n_c; i++)
+            {
+                String^ temp;
+                for (int j = 0; j < cab[i].cabnum; j++)
+                {
+                    temp = Convert::ToString(cab[i].cabnum);
+                }
+                pers2comboBox->Items->Add(temp);
+            }
+        }
+    }
+    else if (rez == 2)
+    {
+        int cur = dataGridView3->CurrentRow->Index;
+
+        if (cabtextBox1->Text == "" || cabtextBox2->Text == "")
+        {
+            MessageBox::Show("Ошибка! Все поля должны быть заполнены!");
+        }
+        else
+        {
+
+            dataGridView3[0, cur]->Value = Convert::ToString(cabtextBox1->Text);
+            dataGridView3[1, cur]->Value = Convert::ToString(cabtextBox2->Text);
+
+            memset(&cab[cur], 0, sizeof(cab[cur]));         
+
+            try
+            {
+                cab[cur].cabnum = Convert::ToInt32(this->cabtextBox1->Text);
+            }
+            catch (...)
+            {
+                MessageBox::Show("Ошибка! В поле 'Номер кабинета' должны быть введены только числовые значения.");
+                return;
+            }
+
+            try
+            {
+                cab[cur].cabarea = Convert::ToInt32(this->cabtextBox2->Text);
+            }
+            catch (...)
+            {
+                MessageBox::Show("Ошибка! В поле 'Площадь кабинета' должны быть введены только числовые значения.");
+                return;
+            }
+
+            pers2comboBox->Items->Clear();
+            for (int i = 0; i < n_c; i++)
+            {
+                String^ temp;
+                for (int j = 0; j < cab[i].cabnum; j++)
+                {
+                    temp = Convert::ToString(cab[i].cabnum);
+                }
+                pers2comboBox->Items->Add(temp);
+            }
+        }
+    }
+};
+System::Void Project2::MyForm::cabcancbut_Click(System::Object^ sender, System::EventArgs^ e) {};
