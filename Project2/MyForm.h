@@ -45,7 +45,7 @@ namespace Project2 {
 	private: System::Windows::Forms::TabPage^ tabPage5;
 	private: System::Windows::Forms::TabPage^ tabPage6;
 	private: System::Windows::Forms::Panel^ Datapanel;
-	private: System::Windows::Forms::Button^ voprbutton;
+
 	private: System::Windows::Forms::Button^ perspodbut;
 
 	private: System::Windows::Forms::Label^ namelabel;
@@ -76,7 +76,8 @@ namespace Project2 {
 
 	private: System::Windows::Forms::Panel^ panel9;
 	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::Label^ strnum;
+	private: System::Windows::Forms::Label^ perstrnum;
+
 	private: System::Windows::Forms::Button^ persbutton3;
 
 	private: System::Windows::Forms::Button^ persbutton2;
@@ -90,7 +91,8 @@ namespace Project2 {
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column4;
 	private: System::Windows::Forms::Panel^ panel10;
 	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::Label^ cabstrnum;
+
 	private: System::Windows::Forms::DataGridView^ dataGridView3;
 
 
@@ -99,7 +101,7 @@ namespace Project2 {
 
 
 	private: System::Windows::Forms::Panel^ panel11;
-	private: System::Windows::Forms::Button^ button11;
+
 	private: System::Windows::Forms::Button^ cabpodbut;
 
 	private: System::Windows::Forms::Label^ label5;
@@ -123,13 +125,16 @@ namespace Project2 {
 
 	private: System::Windows::Forms::Panel^ panel2;
 	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::Label^ label6;
+private: System::Windows::Forms::Label^ zapstrnum;
+
 	private: System::Windows::Forms::Panel^ panel3;
-	private: System::Windows::Forms::Button^ button5;
-	private: System::Windows::Forms::Button^ button6;
+
+private: System::Windows::Forms::Button^ zappodbut1;
+
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::Panel^ panel12;
-	private: System::Windows::Forms::Button^ button7;
+private: System::Windows::Forms::Button^ zapcancbut1;
+
 	private: System::Windows::Forms::Panel^ panel13;
 	private: System::Windows::Forms::Panel^ panel15;
 
@@ -137,7 +142,8 @@ namespace Project2 {
 	private: System::Windows::Forms::Label^ label9;
 	private: System::Windows::Forms::Panel^ panel18;
 	private: System::Windows::Forms::Label^ label12;
-	private: System::Windows::Forms::TextBox^ textBox1;
+private: System::Windows::Forms::TextBox^ zaptextbox1;
+
 	private: System::Windows::Forms::Panel^ panel19;
 private: System::Windows::Forms::ComboBox^ zapcomboBox1;
 
@@ -152,7 +158,8 @@ private: System::Windows::Forms::ComboBox^ zapcomboBox2;
 
 	private: System::Windows::Forms::Panel^ panel21;
 	private: System::Windows::Forms::Label^ label8;
-	private: System::Windows::Forms::Label^ label15;
+private: System::Windows::Forms::Label^ uslstrnum;
+
 	private: System::Windows::Forms::DataGridView^ dataGridView4;
 
 
@@ -160,7 +167,7 @@ private: System::Windows::Forms::ComboBox^ zapcomboBox2;
 
 
 	private: System::Windows::Forms::Panel^ panel22;
-	private: System::Windows::Forms::Button^ button15;
+
 private: System::Windows::Forms::Button^ uslpodtbut;
 
 	private: System::Windows::Forms::Label^ label16;
@@ -183,12 +190,13 @@ private: System::Windows::Forms::TextBox^ usltextbox1;
 
 private: System::Windows::Forms::Panel^ panel26;
 private: System::Windows::Forms::Label^ label19;
-private: System::Windows::Forms::Label^ label20;
+private: System::Windows::Forms::Label^ dlstrnum;
+
 private: System::Windows::Forms::DataGridView^ dataGridView5;
 
 
 private: System::Windows::Forms::Panel^ panel27;
-private: System::Windows::Forms::Button^ button23;
+
 private: System::Windows::Forms::Button^ dlpodtbut;
 
 private: System::Windows::Forms::Label^ label21;
@@ -203,6 +211,7 @@ private: System::Windows::Forms::Panel^ panel30;
 private: System::Windows::Forms::Label^ label23;
 private: System::Windows::Forms::TextBox^ dltextbox1;
 private: System::Windows::Forms::TextBox^ cabtextBox1;
+private: System::Windows::Forms::TextBox^ zaptextbox2;
 
 
 
@@ -212,21 +221,26 @@ private: System::Windows::Forms::TextBox^ cabtextBox1;
 
 
 
-private: System::Windows::Forms::TextBox^ textBox7;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn1;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn2;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn3;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn5;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column5;
+
+
+
+
+
+
+
+
 
 
 
 
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn8;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn9;
-private: System::Windows::Forms::Button^ button2;
-private: System::Windows::Forms::Button^ button3;
-private: System::Windows::Forms::Button^ button4;
+private: System::Windows::Forms::Button^ zapbut1;
+private: System::Windows::Forms::Button^ zapbut3;
+
+
+private: System::Windows::Forms::Button^ zapbut2;
+
 private: System::Windows::Forms::Button^ cabbut1;
 private: System::Windows::Forms::Button^ cabbut3;
 private: System::Windows::Forms::Button^ cabbut2;
@@ -245,6 +259,30 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxC
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn6;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn4;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn7;
+private: System::Windows::Forms::TextBox^ zaptextbox3;
+
+
+
+private: System::Windows::Forms::Label^ label24;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn1;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn2;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column6;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn3;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn5;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column5;
+private: System::Windows::Forms::Label^ label25;
+private: System::Windows::Forms::Label^ label26;
+private: System::Windows::Forms::Label^ label27;
+private: System::Windows::Forms::Label^ label28;
+private: System::Windows::Forms::Label^ label29;
+private: System::Windows::Forms::Label^ label30;
+private: System::Windows::Forms::Label^ label31;
+
+
+
+
+
+
 private: System::Windows::Forms::TextBox^ usltextbox2;
 
 
@@ -275,11 +313,11 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			this->persbutton1 = (gcnew System::Windows::Forms::Button());
 			this->panel9 = (gcnew System::Windows::Forms::Panel());
 			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->strnum = (gcnew System::Windows::Forms::Label());
+			this->perstrnum = (gcnew System::Windows::Forms::Label());
 			this->persbutton3 = (gcnew System::Windows::Forms::Button());
 			this->persbutton2 = (gcnew System::Windows::Forms::Button());
 			this->Datapanel = (gcnew System::Windows::Forms::Panel());
-			this->voprbutton = (gcnew System::Windows::Forms::Button());
+			this->label27 = (gcnew System::Windows::Forms::Label());
 			this->perspodbut = (gcnew System::Windows::Forms::Button());
 			this->namelabel = (gcnew System::Windows::Forms::Label());
 			this->panel8 = (gcnew System::Windows::Forms::Panel());
@@ -306,49 +344,54 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->zapbut1 = (gcnew System::Windows::Forms::Button());
+			this->zapbut3 = (gcnew System::Windows::Forms::Button());
+			this->zapbut2 = (gcnew System::Windows::Forms::Button());
 			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
 			this->dataGridViewTextBoxColumn1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->dataGridViewTextBoxColumn2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column6 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->dataGridViewTextBoxColumn3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->dataGridViewTextBoxColumn5 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column5 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->zapstrnum = (gcnew System::Windows::Forms::Label());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
-			this->button5 = (gcnew System::Windows::Forms::Button());
-			this->button6 = (gcnew System::Windows::Forms::Button());
+			this->label28 = (gcnew System::Windows::Forms::Label());
+			this->zappodbut1 = (gcnew System::Windows::Forms::Button());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->panel12 = (gcnew System::Windows::Forms::Panel());
-			this->button7 = (gcnew System::Windows::Forms::Button());
+			this->zapcancbut1 = (gcnew System::Windows::Forms::Button());
 			this->panel13 = (gcnew System::Windows::Forms::Panel());
-			this->panel15 = (gcnew System::Windows::Forms::Panel());
-			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
 			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->zaptextbox2 = (gcnew System::Windows::Forms::TextBox());
+			this->panel15 = (gcnew System::Windows::Forms::Panel());
+			this->zapcomboBox2 = (gcnew System::Windows::Forms::ComboBox());
+			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->panel18 = (gcnew System::Windows::Forms::Panel());
 			this->label12 = (gcnew System::Windows::Forms::Label());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->zaptextbox1 = (gcnew System::Windows::Forms::TextBox());
 			this->panel19 = (gcnew System::Windows::Forms::Panel());
+			this->label26 = (gcnew System::Windows::Forms::Label());
+			this->label25 = (gcnew System::Windows::Forms::Label());
 			this->zapcomboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->label13 = (gcnew System::Windows::Forms::Label());
 			this->panel20 = (gcnew System::Windows::Forms::Panel());
-			this->zapcomboBox2 = (gcnew System::Windows::Forms::ComboBox());
-			this->label14 = (gcnew System::Windows::Forms::Label());
+			this->zaptextbox3 = (gcnew System::Windows::Forms::TextBox());
+			this->label24 = (gcnew System::Windows::Forms::Label());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
 			this->cabbut1 = (gcnew System::Windows::Forms::Button());
 			this->cabbut3 = (gcnew System::Windows::Forms::Button());
 			this->cabbut2 = (gcnew System::Windows::Forms::Button());
 			this->panel10 = (gcnew System::Windows::Forms::Panel());
 			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->cabstrnum = (gcnew System::Windows::Forms::Label());
 			this->dataGridView3 = (gcnew System::Windows::Forms::DataGridView());
 			this->dataGridViewTextBoxColumn10 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->dataGridViewTextBoxColumn6 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->panel11 = (gcnew System::Windows::Forms::Panel());
-			this->button11 = (gcnew System::Windows::Forms::Button());
+			this->label29 = (gcnew System::Windows::Forms::Label());
 			this->cabpodbut = (gcnew System::Windows::Forms::Button());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->panel14 = (gcnew System::Windows::Forms::Panel());
@@ -363,14 +406,14 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			this->uslbut1 = (gcnew System::Windows::Forms::Button());
 			this->panel21 = (gcnew System::Windows::Forms::Panel());
 			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->label15 = (gcnew System::Windows::Forms::Label());
+			this->uslstrnum = (gcnew System::Windows::Forms::Label());
 			this->uslbut3 = (gcnew System::Windows::Forms::Button());
 			this->dataGridView4 = (gcnew System::Windows::Forms::DataGridView());
 			this->dataGridViewTextBoxColumn4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->dataGridViewTextBoxColumn7 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->uslbut2 = (gcnew System::Windows::Forms::Button());
 			this->panel22 = (gcnew System::Windows::Forms::Panel());
-			this->button15 = (gcnew System::Windows::Forms::Button());
+			this->label30 = (gcnew System::Windows::Forms::Label());
 			this->uslpodtbut = (gcnew System::Windows::Forms::Button());
 			this->label16 = (gcnew System::Windows::Forms::Label());
 			this->panel23 = (gcnew System::Windows::Forms::Panel());
@@ -385,14 +428,14 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			this->dlbut1 = (gcnew System::Windows::Forms::Button());
 			this->panel26 = (gcnew System::Windows::Forms::Panel());
 			this->label19 = (gcnew System::Windows::Forms::Label());
-			this->label20 = (gcnew System::Windows::Forms::Label());
+			this->dlstrnum = (gcnew System::Windows::Forms::Label());
 			this->dlbut3 = (gcnew System::Windows::Forms::Button());
 			this->dataGridView5 = (gcnew System::Windows::Forms::DataGridView());
 			this->dataGridViewTextBoxColumn8 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->dataGridViewTextBoxColumn9 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->dlbut2 = (gcnew System::Windows::Forms::Button());
 			this->panel27 = (gcnew System::Windows::Forms::Panel());
-			this->button23 = (gcnew System::Windows::Forms::Button());
+			this->label31 = (gcnew System::Windows::Forms::Label());
 			this->dlpodtbut = (gcnew System::Windows::Forms::Button());
 			this->label21 = (gcnew System::Windows::Forms::Label());
 			this->panel28 = (gcnew System::Windows::Forms::Panel());
@@ -419,6 +462,7 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			this->panel2->SuspendLayout();
 			this->panel3->SuspendLayout();
 			this->panel12->SuspendLayout();
+			this->panel13->SuspendLayout();
 			this->panel15->SuspendLayout();
 			this->panel18->SuspendLayout();
 			this->panel19->SuspendLayout();
@@ -492,7 +536,7 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			this->panel9->BackColor = System::Drawing::SystemColors::ControlLight;
 			this->panel9->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel9->Controls->Add(this->label2);
-			this->panel9->Controls->Add(this->strnum);
+			this->panel9->Controls->Add(this->perstrnum);
 			this->panel9->Location = System::Drawing::Point(485, 451);
 			this->panel9->Name = L"panel9";
 			this->panel9->Size = System::Drawing::Size(221, 47);
@@ -509,16 +553,16 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			this->label2->TabIndex = 21;
 			this->label2->Text = L"Номер выбранной строки:";
 			// 
-			// strnum
+			// perstrnum
 			// 
-			this->strnum->AutoSize = true;
-			this->strnum->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->perstrnum->AutoSize = true;
+			this->perstrnum->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->strnum->Location = System::Drawing::Point(182, 12);
-			this->strnum->Name = L"strnum";
-			this->strnum->Size = System::Drawing::Size(18, 20);
-			this->strnum->TabIndex = 20;
-			this->strnum->Text = L"1";
+			this->perstrnum->Location = System::Drawing::Point(182, 12);
+			this->perstrnum->Name = L"perstrnum";
+			this->perstrnum->Size = System::Drawing::Size(18, 20);
+			this->perstrnum->TabIndex = 20;
+			this->perstrnum->Text = L"1";
 			// 
 			// persbutton3
 			// 
@@ -545,7 +589,7 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			// Datapanel
 			// 
 			this->Datapanel->BackColor = System::Drawing::SystemColors::ControlLight;
-			this->Datapanel->Controls->Add(this->voprbutton);
+			this->Datapanel->Controls->Add(this->label27);
 			this->Datapanel->Controls->Add(this->perspodbut);
 			this->Datapanel->Controls->Add(this->namelabel);
 			this->Datapanel->Controls->Add(this->panel8);
@@ -559,17 +603,16 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			this->Datapanel->Size = System::Drawing::Size(271, 492);
 			this->Datapanel->TabIndex = 2;
 			// 
-			// voprbutton
+			// label27
 			// 
-			this->voprbutton->BackColor = System::Drawing::SystemColors::AppWorkspace;
-			this->voprbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label27->AutoSize = true;
+			this->label27->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->voprbutton->Location = System::Drawing::Point(201, 11);
-			this->voprbutton->Name = L"voprbutton";
-			this->voprbutton->Size = System::Drawing::Size(58, 57);
-			this->voprbutton->TabIndex = 10;
-			this->voprbutton->Text = L"\?";
-			this->voprbutton->UseVisualStyleBackColor = false;
+			this->label27->Location = System::Drawing::Point(30, 27);
+			this->label27->Name = L"label27";
+			this->label27->Size = System::Drawing::Size(196, 25);
+			this->label27->TabIndex = 34;
+			this->label27->Text = L"Режим не активен";
 			// 
 			// perspodbut
 			// 
@@ -752,16 +795,20 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			// 
 			// dataGridView1
 			// 
+			this->dataGridView1->AllowUserToAddRows = false;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(5) {
 				this->column0,
 					this->Column1, this->Column2, this->Column3, this->Column4
 			});
 			this->dataGridView1->Location = System::Drawing::Point(6, 6);
+			this->dataGridView1->MultiSelect = false;
 			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->ReadOnly = true;
 			this->dataGridView1->RowHeadersVisible = false;
 			this->dataGridView1->Size = System::Drawing::Size(699, 437);
 			this->dataGridView1->TabIndex = 0;
+			this->dataGridView1->CellClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dataGridView1_CellClick);
 			// 
 			// column0
 			// 
@@ -793,9 +840,9 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			// 
 			// tabPage3
 			// 
-			this->tabPage3->Controls->Add(this->button2);
-			this->tabPage3->Controls->Add(this->button3);
-			this->tabPage3->Controls->Add(this->button4);
+			this->tabPage3->Controls->Add(this->zapbut1);
+			this->tabPage3->Controls->Add(this->zapbut3);
+			this->tabPage3->Controls->Add(this->zapbut2);
 			this->tabPage3->Controls->Add(this->dataGridView2);
 			this->tabPage3->Controls->Add(this->panel2);
 			this->tabPage3->Controls->Add(this->panel3);
@@ -807,66 +854,78 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			this->tabPage3->Text = L"Записи";
 			this->tabPage3->UseVisualStyleBackColor = true;
 			// 
-			// button2
+			// zapbut1
 			// 
-			this->button2->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->button2->Location = System::Drawing::Point(6, 451);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(160, 47);
-			this->button2->TabIndex = 37;
-			this->button2->Text = L"Добавление";
-			this->button2->UseVisualStyleBackColor = false;
+			this->zapbut1->BackColor = System::Drawing::SystemColors::ButtonFace;
+			this->zapbut1->Location = System::Drawing::Point(6, 451);
+			this->zapbut1->Name = L"zapbut1";
+			this->zapbut1->Size = System::Drawing::Size(160, 47);
+			this->zapbut1->TabIndex = 37;
+			this->zapbut1->Text = L"Добавление";
+			this->zapbut1->UseVisualStyleBackColor = false;
+			this->zapbut1->Click += gcnew System::EventHandler(this, &MyForm::zapbut1_Click);
 			// 
-			// button3
+			// zapbut3
 			// 
-			this->button3->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->button3->Location = System::Drawing::Point(332, 451);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(146, 47);
-			this->button3->TabIndex = 36;
-			this->button3->Text = L"Удаление";
-			this->button3->UseVisualStyleBackColor = false;
+			this->zapbut3->BackColor = System::Drawing::SystemColors::ButtonFace;
+			this->zapbut3->Location = System::Drawing::Point(332, 451);
+			this->zapbut3->Name = L"zapbut3";
+			this->zapbut3->Size = System::Drawing::Size(146, 47);
+			this->zapbut3->TabIndex = 36;
+			this->zapbut3->Text = L"Удаление";
+			this->zapbut3->UseVisualStyleBackColor = false;
+			this->zapbut3->Click += gcnew System::EventHandler(this, &MyForm::zapbut3_Click);
 			// 
-			// button4
+			// zapbut2
 			// 
-			this->button4->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->button4->Location = System::Drawing::Point(172, 451);
-			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(154, 47);
-			this->button4->TabIndex = 35;
-			this->button4->Text = L"Изменение";
-			this->button4->UseVisualStyleBackColor = false;
+			this->zapbut2->BackColor = System::Drawing::SystemColors::ButtonFace;
+			this->zapbut2->Location = System::Drawing::Point(172, 451);
+			this->zapbut2->Name = L"zapbut2";
+			this->zapbut2->Size = System::Drawing::Size(154, 47);
+			this->zapbut2->TabIndex = 35;
+			this->zapbut2->Text = L"Изменение";
+			this->zapbut2->UseVisualStyleBackColor = false;
+			this->zapbut2->Click += gcnew System::EventHandler(this, &MyForm::zapbut2_Click);
 			// 
 			// dataGridView2
 			// 
+			this->dataGridView2->AllowUserToAddRows = false;
 			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView2->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(5) {
+			this->dataGridView2->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(6) {
 				this->dataGridViewTextBoxColumn1,
-					this->dataGridViewTextBoxColumn2, this->dataGridViewTextBoxColumn3, this->dataGridViewTextBoxColumn5, this->Column5
+					this->dataGridViewTextBoxColumn2, this->Column6, this->dataGridViewTextBoxColumn3, this->dataGridViewTextBoxColumn5, this->Column5
 			});
 			this->dataGridView2->Location = System::Drawing::Point(6, 6);
+			this->dataGridView2->MultiSelect = false;
 			this->dataGridView2->Name = L"dataGridView2";
+			this->dataGridView2->ReadOnly = true;
 			this->dataGridView2->RowHeadersVisible = false;
 			this->dataGridView2->Size = System::Drawing::Size(700, 437);
 			this->dataGridView2->TabIndex = 26;
+			this->dataGridView2->CellClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dataGridView2_CellClick);
 			// 
 			// dataGridViewTextBoxColumn1
 			// 
 			this->dataGridViewTextBoxColumn1->HeaderText = L"Название услуги";
 			this->dataGridViewTextBoxColumn1->Name = L"dataGridViewTextBoxColumn1";
-			this->dataGridViewTextBoxColumn1->Width = 170;
+			this->dataGridViewTextBoxColumn1->Width = 130;
 			// 
 			// dataGridViewTextBoxColumn2
 			// 
 			this->dataGridViewTextBoxColumn2->HeaderText = L"ФИО пациента";
 			this->dataGridViewTextBoxColumn2->Name = L"dataGridViewTextBoxColumn2";
-			this->dataGridViewTextBoxColumn2->Width = 165;
+			this->dataGridViewTextBoxColumn2->Width = 140;
+			// 
+			// Column6
+			// 
+			this->Column6->HeaderText = L"Возраст пациента";
+			this->Column6->Name = L"Column6";
 			// 
 			// dataGridViewTextBoxColumn3
 			// 
 			this->dataGridViewTextBoxColumn3->HeaderText = L"ФИО врача";
 			this->dataGridViewTextBoxColumn3->Name = L"dataGridViewTextBoxColumn3";
-			this->dataGridViewTextBoxColumn3->Width = 160;
+			this->dataGridViewTextBoxColumn3->Width = 130;
 			// 
 			// dataGridViewTextBoxColumn5
 			// 
@@ -883,7 +942,7 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			this->panel2->BackColor = System::Drawing::SystemColors::ControlLight;
 			this->panel2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel2->Controls->Add(this->label1);
-			this->panel2->Controls->Add(this->label6);
+			this->panel2->Controls->Add(this->zapstrnum);
 			this->panel2->Location = System::Drawing::Point(485, 451);
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(221, 47);
@@ -900,22 +959,22 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			this->label1->TabIndex = 21;
 			this->label1->Text = L"Номер выбранной строки:";
 			// 
-			// label6
+			// zapstrnum
 			// 
-			this->label6->AutoSize = true;
-			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->zapstrnum->AutoSize = true;
+			this->zapstrnum->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label6->Location = System::Drawing::Point(182, 12);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(18, 20);
-			this->label6->TabIndex = 20;
-			this->label6->Text = L"1";
+			this->zapstrnum->Location = System::Drawing::Point(182, 12);
+			this->zapstrnum->Name = L"zapstrnum";
+			this->zapstrnum->Size = System::Drawing::Size(18, 20);
+			this->zapstrnum->TabIndex = 20;
+			this->zapstrnum->Text = L"1";
 			// 
 			// panel3
 			// 
 			this->panel3->BackColor = System::Drawing::SystemColors::ControlLight;
-			this->panel3->Controls->Add(this->button5);
-			this->panel3->Controls->Add(this->button6);
+			this->panel3->Controls->Add(this->label28);
+			this->panel3->Controls->Add(this->zappodbut1);
 			this->panel3->Controls->Add(this->label7);
 			this->panel3->Controls->Add(this->panel12);
 			this->panel3->Controls->Add(this->panel13);
@@ -928,28 +987,27 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			this->panel3->Size = System::Drawing::Size(271, 492);
 			this->panel3->TabIndex = 27;
 			// 
-			// button5
+			// label28
 			// 
-			this->button5->BackColor = System::Drawing::SystemColors::AppWorkspace;
-			this->button5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label28->AutoSize = true;
+			this->label28->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button5->Location = System::Drawing::Point(201, 11);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(58, 57);
-			this->button5->TabIndex = 10;
-			this->button5->Text = L"\?";
-			this->button5->UseVisualStyleBackColor = false;
+			this->label28->Location = System::Drawing::Point(39, 21);
+			this->label28->Name = L"label28";
+			this->label28->Size = System::Drawing::Size(196, 25);
+			this->label28->TabIndex = 35;
+			this->label28->Text = L"Режим не активен";
 			// 
-			// button6
+			// zappodbut1
 			// 
-			this->button6->BackColor = System::Drawing::SystemColors::Control;
-			this->button6->Location = System::Drawing::Point(12, 434);
-			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(119, 42);
-			this->button6->TabIndex = 23;
-			this->button6->Text = L"Подтвердить";
-			this->button6->UseVisualStyleBackColor = false;
-			this->button6->Click += gcnew System::EventHandler(this, &MyForm::button6_Click);
+			this->zappodbut1->BackColor = System::Drawing::SystemColors::Control;
+			this->zappodbut1->Location = System::Drawing::Point(12, 434);
+			this->zappodbut1->Name = L"zappodbut1";
+			this->zappodbut1->Size = System::Drawing::Size(119, 42);
+			this->zappodbut1->TabIndex = 23;
+			this->zappodbut1->Text = L"Подтвердить";
+			this->zappodbut1->UseVisualStyleBackColor = false;
+			this->zappodbut1->Click += gcnew System::EventHandler(this, &MyForm::zappodbut1_Click);
 			// 
 			// label7
 			// 
@@ -964,65 +1022,87 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			// panel12
 			// 
 			this->panel12->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->panel12->Controls->Add(this->button7);
+			this->panel12->Controls->Add(this->zapcancbut1);
 			this->panel12->Location = System::Drawing::Point(0, 421);
 			this->panel12->Name = L"panel12";
 			this->panel12->Size = System::Drawing::Size(271, 71);
 			this->panel12->TabIndex = 32;
 			// 
-			// button7
+			// zapcancbut1
 			// 
-			this->button7->BackColor = System::Drawing::SystemColors::Control;
-			this->button7->Location = System::Drawing::Point(138, 12);
-			this->button7->Name = L"button7";
-			this->button7->Size = System::Drawing::Size(120, 42);
-			this->button7->TabIndex = 24;
-			this->button7->Text = L"Очистить поля";
-			this->button7->UseVisualStyleBackColor = false;
+			this->zapcancbut1->BackColor = System::Drawing::SystemColors::Control;
+			this->zapcancbut1->Location = System::Drawing::Point(138, 12);
+			this->zapcancbut1->Name = L"zapcancbut1";
+			this->zapcancbut1->Size = System::Drawing::Size(120, 42);
+			this->zapcancbut1->TabIndex = 24;
+			this->zapcancbut1->Text = L"Очистить поля";
+			this->zapcancbut1->UseVisualStyleBackColor = false;
+			this->zapcancbut1->Click += gcnew System::EventHandler(this, &MyForm::zapcancbut1_Click);
 			// 
 			// panel13
 			// 
 			this->panel13->BackColor = System::Drawing::SystemColors::Control;
 			this->panel13->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel13->Controls->Add(this->label9);
+			this->panel13->Controls->Add(this->zaptextbox2);
 			this->panel13->Location = System::Drawing::Point(0, 359);
 			this->panel13->Name = L"panel13";
 			this->panel13->Size = System::Drawing::Size(271, 63);
 			this->panel13->TabIndex = 31;
 			// 
-			// panel15
-			// 
-			this->panel15->BackColor = System::Drawing::SystemColors::Control;
-			this->panel15->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->panel15->Controls->Add(this->textBox7);
-			this->panel15->Controls->Add(this->label9);
-			this->panel15->Location = System::Drawing::Point(0, 291);
-			this->panel15->Name = L"panel15";
-			this->panel15->Size = System::Drawing::Size(271, 69);
-			this->panel15->TabIndex = 30;
-			// 
-			// textBox7
-			// 
-			this->textBox7->Location = System::Drawing::Point(12, 31);
-			this->textBox7->Name = L"textBox7";
-			this->textBox7->ReadOnly = true;
-			this->textBox7->Size = System::Drawing::Size(248, 20);
-			this->textBox7->TabIndex = 18;
-			// 
 			// label9
 			// 
 			this->label9->AutoSize = true;
-			this->label9->Location = System::Drawing::Point(8, 10);
+			this->label9->Location = System::Drawing::Point(10, 13);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(132, 13);
 			this->label9->TabIndex = 17;
 			this->label9->Text = L"Номер кабинета приёма";
+			// 
+			// zaptextbox2
+			// 
+			this->zaptextbox2->Location = System::Drawing::Point(12, 35);
+			this->zaptextbox2->Name = L"zaptextbox2";
+			this->zaptextbox2->ReadOnly = true;
+			this->zaptextbox2->Size = System::Drawing::Size(248, 20);
+			this->zaptextbox2->TabIndex = 18;
+			// 
+			// panel15
+			// 
+			this->panel15->BackColor = System::Drawing::SystemColors::Control;
+			this->panel15->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel15->Controls->Add(this->zapcomboBox2);
+			this->panel15->Controls->Add(this->label14);
+			this->panel15->Location = System::Drawing::Point(0, 289);
+			this->panel15->Name = L"panel15";
+			this->panel15->Size = System::Drawing::Size(271, 71);
+			this->panel15->TabIndex = 30;
+			// 
+			// zapcomboBox2
+			// 
+			this->zapcomboBox2->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->zapcomboBox2->FormattingEnabled = true;
+			this->zapcomboBox2->Location = System::Drawing::Point(12, 38);
+			this->zapcomboBox2->Name = L"zapcomboBox2";
+			this->zapcomboBox2->Size = System::Drawing::Size(247, 21);
+			this->zapcomboBox2->TabIndex = 22;
+			this->zapcomboBox2->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::zapcomboBox2_SelectedIndexChanged);
+			// 
+			// label14
+			// 
+			this->label14->AutoSize = true;
+			this->label14->Location = System::Drawing::Point(10, 17);
+			this->label14->Name = L"label14";
+			this->label14->Size = System::Drawing::Size(66, 13);
+			this->label14->TabIndex = 15;
+			this->label14->Text = L"ФИО врача";
 			// 
 			// panel18
 			// 
 			this->panel18->BackColor = System::Drawing::SystemColors::Control;
 			this->panel18->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel18->Controls->Add(this->label12);
-			this->panel18->Controls->Add(this->textBox1);
+			this->panel18->Controls->Add(this->zaptextbox1);
 			this->panel18->Location = System::Drawing::Point(0, 148);
 			this->panel18->Name = L"panel18";
 			this->panel18->Size = System::Drawing::Size(271, 80);
@@ -1037,37 +1117,57 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			this->label12->TabIndex = 14;
 			this->label12->Text = L"ФИО пациента";
 			// 
-			// textBox1
+			// zaptextbox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(11, 37);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(248, 20);
-			this->textBox1->TabIndex = 12;
+			this->zaptextbox1->Location = System::Drawing::Point(11, 37);
+			this->zaptextbox1->Name = L"zaptextbox1";
+			this->zaptextbox1->Size = System::Drawing::Size(248, 20);
+			this->zaptextbox1->TabIndex = 12;
 			// 
 			// panel19
 			// 
 			this->panel19->BackColor = System::Drawing::SystemColors::Control;
 			this->panel19->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel19->Controls->Add(this->label26);
+			this->panel19->Controls->Add(this->label25);
 			this->panel19->Controls->Add(this->zapcomboBox1);
 			this->panel19->Controls->Add(this->label13);
-			this->panel19->Location = System::Drawing::Point(0, 80);
+			this->panel19->Location = System::Drawing::Point(0, 65);
 			this->panel19->Name = L"panel19";
-			this->panel19->Size = System::Drawing::Size(271, 70);
+			this->panel19->Size = System::Drawing::Size(271, 85);
 			this->panel19->TabIndex = 28;
+			// 
+			// label26
+			// 
+			this->label26->AutoSize = true;
+			this->label26->Location = System::Drawing::Point(12, 57);
+			this->label26->Name = L"label26";
+			this->label26->Size = System::Drawing::Size(101, 13);
+			this->label26->TabIndex = 35;
+			this->label26->Text = L"Стоимость услуги:";
+			// 
+			// label25
+			// 
+			this->label25->AutoSize = true;
+			this->label25->Location = System::Drawing::Point(115, 58);
+			this->label25->Name = L"label25";
+			this->label25->Size = System::Drawing::Size(0, 13);
+			this->label25->TabIndex = 34;
 			// 
 			// zapcomboBox1
 			// 
 			this->zapcomboBox1->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->zapcomboBox1->FormattingEnabled = true;
-			this->zapcomboBox1->Location = System::Drawing::Point(12, 31);
+			this->zapcomboBox1->Location = System::Drawing::Point(11, 29);
 			this->zapcomboBox1->Name = L"zapcomboBox1";
 			this->zapcomboBox1->Size = System::Drawing::Size(247, 21);
 			this->zapcomboBox1->TabIndex = 21;
+			this->zapcomboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::zapcomboBox1_SelectedIndexChanged);
 			// 
 			// label13
 			// 
 			this->label13->AutoSize = true;
-			this->label13->Location = System::Drawing::Point(9, 8);
+			this->label13->Location = System::Drawing::Point(9, 9);
 			this->label13->Name = L"label13";
 			this->label13->Size = System::Drawing::Size(93, 13);
 			this->label13->TabIndex = 7;
@@ -1077,31 +1177,28 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			// 
 			this->panel20->BackColor = System::Drawing::SystemColors::Control;
 			this->panel20->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->panel20->Controls->Add(this->zapcomboBox2);
-			this->panel20->Controls->Add(this->label14);
+			this->panel20->Controls->Add(this->zaptextbox3);
+			this->panel20->Controls->Add(this->label24);
 			this->panel20->Location = System::Drawing::Point(0, 227);
 			this->panel20->Name = L"panel20";
 			this->panel20->Size = System::Drawing::Size(271, 65);
 			this->panel20->TabIndex = 23;
 			// 
-			// zapcomboBox2
+			// zaptextbox3
 			// 
-			this->zapcomboBox2->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
-			this->zapcomboBox2->FormattingEnabled = true;
-			this->zapcomboBox2->Location = System::Drawing::Point(11, 28);
-			this->zapcomboBox2->Name = L"zapcomboBox2";
-			this->zapcomboBox2->Size = System::Drawing::Size(247, 21);
-			this->zapcomboBox2->TabIndex = 22;
-			this->zapcomboBox2->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::zapcomboBox2_SelectedIndexChanged);
+			this->zaptextbox3->Location = System::Drawing::Point(11, 35);
+			this->zaptextbox3->Name = L"zaptextbox3";
+			this->zaptextbox3->Size = System::Drawing::Size(248, 20);
+			this->zaptextbox3->TabIndex = 13;
 			// 
-			// label14
+			// label24
 			// 
-			this->label14->AutoSize = true;
-			this->label14->Location = System::Drawing::Point(9, 7);
-			this->label14->Name = L"label14";
-			this->label14->Size = System::Drawing::Size(66, 13);
-			this->label14->TabIndex = 15;
-			this->label14->Text = L"ФИО врача";
+			this->label24->AutoSize = true;
+			this->label24->Location = System::Drawing::Point(8, 13);
+			this->label24->Name = L"label24";
+			this->label24->Size = System::Drawing::Size(99, 13);
+			this->label24->TabIndex = 15;
+			this->label24->Text = L"Возраст пациента";
 			// 
 			// tabPage4
 			// 
@@ -1157,7 +1254,7 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			this->panel10->BackColor = System::Drawing::SystemColors::ControlLight;
 			this->panel10->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel10->Controls->Add(this->label3);
-			this->panel10->Controls->Add(this->label4);
+			this->panel10->Controls->Add(this->cabstrnum);
 			this->panel10->Location = System::Drawing::Point(481, 456);
 			this->panel10->Name = L"panel10";
 			this->panel10->Size = System::Drawing::Size(224, 47);
@@ -1174,19 +1271,20 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			this->label3->TabIndex = 21;
 			this->label3->Text = L"Номер выбранной строки:";
 			// 
-			// label4
+			// cabstrnum
 			// 
-			this->label4->AutoSize = true;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->cabstrnum->AutoSize = true;
+			this->cabstrnum->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label4->Location = System::Drawing::Point(182, 12);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(18, 20);
-			this->label4->TabIndex = 20;
-			this->label4->Text = L"1";
+			this->cabstrnum->Location = System::Drawing::Point(182, 12);
+			this->cabstrnum->Name = L"cabstrnum";
+			this->cabstrnum->Size = System::Drawing::Size(18, 20);
+			this->cabstrnum->TabIndex = 20;
+			this->cabstrnum->Text = L"1";
 			// 
 			// dataGridView3
 			// 
+			this->dataGridView3->AllowUserToAddRows = false;
 			this->dataGridView3->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView3->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(2) {
 				this->dataGridViewTextBoxColumn10,
@@ -1197,6 +1295,7 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			this->dataGridView3->RowHeadersVisible = false;
 			this->dataGridView3->Size = System::Drawing::Size(699, 444);
 			this->dataGridView3->TabIndex = 28;
+			this->dataGridView3->CellClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dataGridView3_CellClick);
 			// 
 			// dataGridViewTextBoxColumn10
 			// 
@@ -1213,7 +1312,7 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			// panel11
 			// 
 			this->panel11->BackColor = System::Drawing::SystemColors::ControlLight;
-			this->panel11->Controls->Add(this->button11);
+			this->panel11->Controls->Add(this->label29);
 			this->panel11->Controls->Add(this->cabpodbut);
 			this->panel11->Controls->Add(this->label5);
 			this->panel11->Controls->Add(this->panel14);
@@ -1224,17 +1323,16 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			this->panel11->Size = System::Drawing::Size(271, 497);
 			this->panel11->TabIndex = 29;
 			// 
-			// button11
+			// label29
 			// 
-			this->button11->BackColor = System::Drawing::SystemColors::AppWorkspace;
-			this->button11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label29->AutoSize = true;
+			this->label29->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button11->Location = System::Drawing::Point(201, 11);
-			this->button11->Name = L"button11";
-			this->button11->Size = System::Drawing::Size(58, 57);
-			this->button11->TabIndex = 10;
-			this->button11->Text = L"\?";
-			this->button11->UseVisualStyleBackColor = false;
+			this->label29->Location = System::Drawing::Point(30, 28);
+			this->label29->Name = L"label29";
+			this->label29->Size = System::Drawing::Size(196, 25);
+			this->label29->TabIndex = 35;
+			this->label29->Text = L"Режим не активен";
 			// 
 			// cabpodbut
 			// 
@@ -1363,7 +1461,7 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			this->panel21->BackColor = System::Drawing::SystemColors::ControlLight;
 			this->panel21->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel21->Controls->Add(this->label8);
-			this->panel21->Controls->Add(this->label15);
+			this->panel21->Controls->Add(this->uslstrnum);
 			this->panel21->Location = System::Drawing::Point(481, 456);
 			this->panel21->Name = L"panel21";
 			this->panel21->Size = System::Drawing::Size(224, 47);
@@ -1380,16 +1478,17 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			this->label8->TabIndex = 21;
 			this->label8->Text = L"Номер выбранной строки:";
 			// 
-			// label15
+			// uslstrnum
 			// 
-			this->label15->AutoSize = true;
-			this->label15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->uslstrnum->AutoSize = true;
+			this->uslstrnum->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label15->Location = System::Drawing::Point(182, 12);
-			this->label15->Name = L"label15";
-			this->label15->Size = System::Drawing::Size(18, 20);
-			this->label15->TabIndex = 20;
-			this->label15->Text = L"1";
+			this->uslstrnum->Location = System::Drawing::Point(182, 12);
+			this->uslstrnum->Name = L"uslstrnum";
+			this->uslstrnum->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->uslstrnum->Size = System::Drawing::Size(18, 20);
+			this->uslstrnum->TabIndex = 20;
+			this->uslstrnum->Text = L"1";
 			// 
 			// uslbut3
 			// 
@@ -1404,6 +1503,7 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			// 
 			// dataGridView4
 			// 
+			this->dataGridView4->AllowUserToAddRows = false;
 			this->dataGridView4->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView4->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(2) {
 				this->dataGridViewTextBoxColumn4,
@@ -1414,6 +1514,7 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			this->dataGridView4->RowHeadersVisible = false;
 			this->dataGridView4->Size = System::Drawing::Size(699, 444);
 			this->dataGridView4->TabIndex = 34;
+			this->dataGridView4->CellClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dataGridView4_CellClick);
 			// 
 			// dataGridViewTextBoxColumn4
 			// 
@@ -1441,7 +1542,7 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			// panel22
 			// 
 			this->panel22->BackColor = System::Drawing::SystemColors::ControlLight;
-			this->panel22->Controls->Add(this->button15);
+			this->panel22->Controls->Add(this->label30);
 			this->panel22->Controls->Add(this->uslpodtbut);
 			this->panel22->Controls->Add(this->label16);
 			this->panel22->Controls->Add(this->panel23);
@@ -1452,17 +1553,16 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			this->panel22->Size = System::Drawing::Size(271, 497);
 			this->panel22->TabIndex = 35;
 			// 
-			// button15
+			// label30
 			// 
-			this->button15->BackColor = System::Drawing::SystemColors::AppWorkspace;
-			this->button15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label30->AutoSize = true;
+			this->label30->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button15->Location = System::Drawing::Point(201, 11);
-			this->button15->Name = L"button15";
-			this->button15->Size = System::Drawing::Size(58, 57);
-			this->button15->TabIndex = 10;
-			this->button15->Text = L"\?";
-			this->button15->UseVisualStyleBackColor = false;
+			this->label30->Location = System::Drawing::Point(30, 30);
+			this->label30->Name = L"label30";
+			this->label30->Size = System::Drawing::Size(196, 25);
+			this->label30->TabIndex = 35;
+			this->label30->Text = L"Режим не активен";
 			// 
 			// uslpodtbut
 			// 
@@ -1591,7 +1691,7 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			this->panel26->BackColor = System::Drawing::SystemColors::ControlLight;
 			this->panel26->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel26->Controls->Add(this->label19);
-			this->panel26->Controls->Add(this->label20);
+			this->panel26->Controls->Add(this->dlstrnum);
 			this->panel26->Location = System::Drawing::Point(481, 456);
 			this->panel26->Name = L"panel26";
 			this->panel26->Size = System::Drawing::Size(224, 47);
@@ -1608,16 +1708,16 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			this->label19->TabIndex = 21;
 			this->label19->Text = L"Номер выбранной строки:";
 			// 
-			// label20
+			// dlstrnum
 			// 
-			this->label20->AutoSize = true;
-			this->label20->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->dlstrnum->AutoSize = true;
+			this->dlstrnum->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label20->Location = System::Drawing::Point(182, 12);
-			this->label20->Name = L"label20";
-			this->label20->Size = System::Drawing::Size(18, 20);
-			this->label20->TabIndex = 20;
-			this->label20->Text = L"1";
+			this->dlstrnum->Location = System::Drawing::Point(182, 12);
+			this->dlstrnum->Name = L"dlstrnum";
+			this->dlstrnum->Size = System::Drawing::Size(18, 20);
+			this->dlstrnum->TabIndex = 20;
+			this->dlstrnum->Text = L"1";
 			// 
 			// dlbut3
 			// 
@@ -1632,6 +1732,7 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			// 
 			// dataGridView5
 			// 
+			this->dataGridView5->AllowUserToAddRows = false;
 			this->dataGridView5->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView5->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(2) {
 				this->dataGridViewTextBoxColumn8,
@@ -1642,6 +1743,7 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			this->dataGridView5->RowHeadersVisible = false;
 			this->dataGridView5->Size = System::Drawing::Size(699, 444);
 			this->dataGridView5->TabIndex = 40;
+			this->dataGridView5->CellClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dataGridView5_CellClick);
 			// 
 			// dataGridViewTextBoxColumn8
 			// 
@@ -1669,7 +1771,7 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			// panel27
 			// 
 			this->panel27->BackColor = System::Drawing::SystemColors::ControlLight;
-			this->panel27->Controls->Add(this->button23);
+			this->panel27->Controls->Add(this->label31);
 			this->panel27->Controls->Add(this->dlpodtbut);
 			this->panel27->Controls->Add(this->label21);
 			this->panel27->Controls->Add(this->panel28);
@@ -1680,17 +1782,16 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			this->panel27->Size = System::Drawing::Size(271, 497);
 			this->panel27->TabIndex = 41;
 			// 
-			// button23
+			// label31
 			// 
-			this->button23->BackColor = System::Drawing::SystemColors::AppWorkspace;
-			this->button23->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label31->AutoSize = true;
+			this->label31->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button23->Location = System::Drawing::Point(201, 11);
-			this->button23->Name = L"button23";
-			this->button23->Size = System::Drawing::Size(58, 57);
-			this->button23->TabIndex = 10;
-			this->button23->Text = L"\?";
-			this->button23->UseVisualStyleBackColor = false;
+			this->label31->Location = System::Drawing::Point(30, 30);
+			this->label31->Name = L"label31";
+			this->label31->Size = System::Drawing::Size(196, 25);
+			this->label31->TabIndex = 35;
+			this->label31->Text = L"Режим не активен";
 			// 
 			// dlpodtbut
 			// 
@@ -1824,6 +1925,8 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 			this->panel3->ResumeLayout(false);
 			this->panel3->PerformLayout();
 			this->panel12->ResumeLayout(false);
+			this->panel13->ResumeLayout(false);
+			this->panel13->PerformLayout();
 			this->panel15->ResumeLayout(false);
 			this->panel15->PerformLayout();
 			this->panel18->ResumeLayout(false);
@@ -1869,8 +1972,7 @@ private: System::Windows::Forms::TextBox^ usltextbox2;
 
 		}
 #pragma endregion
-	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
+
 private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e);
 private: System::Void zapcomboBox2_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e);
 private: System::Void perspodbut_Click(System::Object^ sender, System::EventArgs^ e);
@@ -1896,5 +1998,20 @@ private: System::Void cabbut2_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void cabbut3_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void cabpodbut_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void cabcancbut_Click(System::Object^ sender, System::EventArgs^ e); 
+
+private: System::Void zapbut1_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void zapbut2_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void zapbut3_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void zapcancbut1_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void zappodbut1_Click(System::Object^ sender, System::EventArgs^ e);
+
+private: System::Void zapcomboBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e);
+
+private: System::Void dataGridView1_CellClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e);
+private: System::Void dataGridView2_CellClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e);
+private: System::Void dataGridView3_CellClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e);
+private: System::Void dataGridView4_CellClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e);
+private: System::Void dataGridView5_CellClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e);
+
 };
 }
